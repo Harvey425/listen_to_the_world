@@ -26,7 +26,7 @@ function cn(...inputs: (string | undefined | null | false)[]) {
 }
 
 export function PlayerPanel() {
-    const { activeStation, isPlaying, togglePlay, playRandomStation, language, weather } = useRadioStore();
+    const { activeStation, isPlaying, togglePlay, playRandomStation, language, weather, favorites, toggleFavorite } = useRadioStore();
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [volume, setVolume] = useState(0.8);
     const [_error, setError] = useState(false);
@@ -337,8 +337,13 @@ export function PlayerPanel() {
                         {/* Actions (Moved from Center) */}
                         <div className="flex items-center gap-3">
                             <ShareButton />
-                            <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white/70 hover:text-red-400 transition-all hover:scale-105 active:scale-95">
-                                <Heart size={18} />
+                            <button
+                                onClick={() => activeStation && toggleFavorite(activeStation.stationuuid)}
+                                className={cn(
+                                    "w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all hover:scale-105 active:scale-95",
+                                    activeStation && favorites.includes(activeStation.stationuuid) ? "text-red-500" : "text-white/70 hover:text-red-400"
+                                )}>
+                                <Heart size={18} fill={activeStation && favorites.includes(activeStation.stationuuid) ? "currentColor" : "none"} />
                             </button>
                         </div>
                     </div>

@@ -11,7 +11,7 @@ function cn(...inputs: (string | undefined | null | false)[]) {
 }
 
 export function StationList() {
-    const { stations, activeStation, playStation, language, filterTag, setFilterTag, searchTerm, setSearchTerm } = useRadioStore();
+    const { stations, activeStation, playStation, language, filterTag, setFilterTag, searchTerm, setSearchTerm, favorites } = useRadioStore();
     const [isOpen, setIsOpen] = useState(true);
 
     const t = {
@@ -39,7 +39,11 @@ export function StationList() {
 
         // 1. Tag Filter
         if (filterTag) {
-            result = result.filter(s => s.tags && s.tags.toLowerCase().includes(filterTag));
+            if (filterTag === 'favorites') {
+                result = result.filter(s => favorites.includes(s.stationuuid));
+            } else {
+                result = result.filter(s => s.tags && s.tags.toLowerCase().includes(filterTag));
+            }
         }
 
         // 2. Search Filter
@@ -70,7 +74,7 @@ export function StationList() {
 
             return false;
         });
-    }, [stations, searchTerm, filterTag]);
+    }, [stations, searchTerm, filterTag, favorites]);
 
     // Limit displayed results for performance
     const displayStations = filteredStations.slice(0, 100);
@@ -127,6 +131,7 @@ export function StationList() {
                             <ScrollableTagList
                                 tags={[
                                     { id: null, label: 'All', zh: '全部' },
+                                    { id: 'favorites', label: 'Favorites', zh: '我的收藏' },
                                     ...TAG_MAP
                                 ]}
                                 activeTag={filterTag}

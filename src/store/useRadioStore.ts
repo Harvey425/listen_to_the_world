@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 import { fetchStations, radioService } from '../services/radioApi';
 import type { Station } from '../types/radio';
 import { fetchWeather, type WeatherData } from '../services/weatherApi';
@@ -32,11 +33,15 @@ interface RadioState {
     setSearchTerm: (term: string) => void;
     weather: WeatherData | null;
 
+    // Favorites
+    favorites: string[]; // List of station UUIDs
+    toggleFavorite: (stationId: string) => void;
+
     // Deep Link Support
     resolveStationById: (id: string) => Promise<Station | null>;
 }
 
-export const useRadioStore = create<RadioState>((set, get) => ({
+export const useRadioStore = create<RadioState>()(persist((set, get) => ({
     stations: [],
     loading: false,
     activeStation: null,
@@ -57,6 +62,21 @@ export const useRadioStore = create<RadioState>((set, get) => ({
     setSelectedCountry: (country) => set({ selectedCountry: country }),
     setHoveredCountry: (name, code) => set({ hoveredCountry: name, hoveredCountryCode: code }),
     setHoveredStationName: (name) => set({ hoveredStationName: name }),
+
+    favorites: [],
+    toggleFavorite: (stationId) => set((state) => {
+        const isFav = state.favorites.includes(stationId);
+        if (isFav) {
+            return {
+                favorites: state.favorites.filter(id => id !== stationId)
+            };
+        } else {
+            return {
+                favorites: [...state.favorites, stationId]
+            };
+        }
+    }),
+
 
     setFilterTag: (tag: string | null) => set({ filterTag: tag }),
     setSearchTerm: (term: string) => set({ searchTerm: term }),
@@ -191,4 +211,7 @@ export const useRadioStore = create<RadioState>((set, get) => ({
         set({ loading: false });
         return null;
     }
+}), {
+    name: 'listen-to-the-world-storage',
+    partialize: (state) => ({ favorites: state.favorites, language: state.language }), // Only persist favorites and language
 }));
