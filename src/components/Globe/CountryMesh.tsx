@@ -56,7 +56,14 @@ export function CountryMesh() {
 
     const hoveredCodeRef = useRef<string | null>(null);
 
+    const lastMoveTime = useRef(0);
+
     const onPointerMove = (e: any) => {
+        // Throttle to run every 50ms max to prevent performance issues
+        const now = Date.now();
+        if (now - lastMoveTime.current < 50) return;
+        lastMoveTime.current = now;
+
         // e.point is Vector3 (World Space)
         if (!geoJson) return;
 
@@ -74,13 +81,18 @@ export function CountryMesh() {
             const name = country.properties.NAME || country.properties.name || country.properties.ADMIN;
             const code = country.properties.ISO_A2 || country.properties.ISO_A2_EH; // ISO Code
 
-            setHoveredCountry(name);
-            hoveredCodeRef.current = code;
-            document.body.style.cursor = 'pointer';
+            // Only update if changed to avoid expensive re-renders
+            if (hoveredCodeRef.current !== code) {
+                setHoveredCountry(name, code);
+                hoveredCodeRef.current = code;
+                document.body.style.cursor = 'pointer';
+            }
         } else {
-            setHoveredCountry(null);
-            hoveredCodeRef.current = null;
-            document.body.style.cursor = 'auto';
+            if (hoveredCodeRef.current !== null) {
+                setHoveredCountry(null, null);
+                hoveredCodeRef.current = null;
+                document.body.style.cursor = 'auto';
+            }
         }
     };
 
@@ -115,30 +127,8 @@ export function CountryMesh() {
             </mesh>
 
             {/* Country Borders */}
-            {lines.map((line, idx) => {
-                // We need to match line.id (Name) with selectedCountry (Code)?
-                // Ah, line.id is currently NAME.
-                // Issue: If selectedCountry is CODE, this visual highlight logic breaks:
-                // selectedCountry === line.id
-                // We need line to store CODE as ID.
-                return (
-                    <Line
-                        key={idx}
-                        points={line.points}
-                        color={
-                            // We can't easily match Code here if line.id is Name.
-                            // Let's rely on hoveredCountry (Name) for hover effect.
-                            // For Selection effect (Cyan), we need to check if selectedCountry (Code) matches this line's Code.
-                            // So we must store Code in 'lines'.
-                            (selectedCountry && line.code === selectedCountry) ? '#00f3ff' :
-                                (hoveredCountry && line.id === hoveredCountry) ? '#ffffff' : '#444444'
-                        }
-                        lineWidth={1}
-                        transparent
-                        opacity={(selectedCountry && line.code === selectedCountry) ? 1 : 0.3}
-                    />
-                );
-            })}
+            {/* Country Borders - REMOVED to avoid political controversy */}
+            {/* lines.map(...) code removed */}
         </group>
     );
 }

@@ -1,0 +1,311 @@
+/* WeatherOverlay.module.css */
+
+.container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+/* --- Gradients --- */
+.gradientLayer {
+    position: absolute;
+    inset: 0;
+    transition: opacity 1.5s ease-in-out;
+    opacity: 0;
+}
+
+.gradientLayer.active {
+    opacity: 1;
+}
+
+.contrastOverlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transition: background-color 1s ease;
+}
+
+.clearDay {
+    background: linear-gradient(135deg, #2980b9 0%, #6dd5fa 100%);
+}
+
+.clearNight {
+    background: linear-gradient(to bottom, #000428, #004e92);
+}
+
+.cloudy {
+    background: linear-gradient(to bottom, #4b6cb7, #8e9eab);
+    /* Bluer "Partly Cloudy" */
+}
+
+/* Time of Day Gradients */
+.dawn {
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fad0c4);
+    /* Pink/Blue Dawn */
+}
+
+.dusk {
+    background-image: linear-gradient(to bottom, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    /* User provided "Morning Salad" style seamless sunset */
+}
+
+.night {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    /* Deep Night */
+}
+
+/* Celestial Elements */
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Rain Effect (Canvas handles particles, this is background mood) */
+.rainy {
+    background: linear-gradient(to bottom, #3a404d, #5b6467);
+    /* Dark Grey rain */
+}
+
+.overcast {
+    background: linear-gradient(to bottom, #304352, #859398);
+}
+
+.snowy {
+    background: linear-gradient(to bottom, #83a4d4, #b6fbff);
+}
+
+.foggy {
+    background: linear-gradient(to bottom, #3e5151, #decba4);
+}
+
+/* --- Sun Effects --- */
+.sunDisk {
+    position: absolute;
+    top: -60px;
+    /* Peek from corner */
+    left: -60px;
+    right: auto;
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle, #fff 30%, #ffd700 80%, transparent 100%);
+    border-radius: 50%;
+    filter: blur(10px);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+    opacity: 0.9;
+    z-index: 1;
+    /* Above beams */
+    animation: sunPulse 6s ease-in-out infinite alternate;
+}
+
+.sunBeams {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: auto;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg at 50% 50%,
+            rgba(255, 255, 255, 0.1) 0deg,
+            transparent 20deg,
+            rgba(255, 255, 255, 0.1) 40deg,
+            transparent 60deg,
+            rgba(255, 255, 255, 0.1) 80deg,
+            transparent 100deg,
+            rgba(255, 255, 255, 0.1) 120deg,
+            transparent 140deg,
+            rgba(255, 255, 255, 0.1) 160deg,
+            transparent 180deg,
+            rgba(255, 255, 255, 0.1) 200deg,
+            transparent 220deg,
+            rgba(255, 255, 255, 0.1) 240deg,
+            transparent 260deg,
+            rgba(255, 255, 255, 0.1) 280deg,
+            transparent 300deg,
+            rgba(255, 255, 255, 0.1) 320deg,
+            transparent 340deg,
+            rgba(255, 255, 255, 0.1) 360deg);
+    animation: rotateSun 120s linear infinite;
+    /* Slower rotation */
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.sunGlow {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    right: auto;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(255, 255, 200, 0.6) 0%, rgba(255, 200, 50, 0) 70%);
+    filter: blur(50px);
+    animation: pulseGlow 6s ease-in-out infinite alternate;
+}
+
+/* --- Cloud Effects --- */
+.cloudLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4), transparent 60%),
+        radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.3), transparent 50%);
+    filter: blur(40px);
+    opacity: 0.7;
+    animation: drift 60s linear infinite;
+}
+
+.thickClouds {
+    top: -20%;
+    background: radial-gradient(circle at 30% 30%, rgba(200, 200, 200, 0.8), transparent 70%),
+        radial-gradient(circle at 70% 60%, rgba(150, 150, 150, 0.6), transparent 60%);
+    filter: blur(50px);
+    animation: drift 100s linear infinite reverse;
+}
+
+.fogLayer {
+    position: absolute;
+    inset: 0;
+    width: 200%;
+    background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    filter: blur(20px);
+    animation: fogFlow 20s linear infinite;
+}
+
+/* --- Rain Effects (Parallax) --- */
+.rainLayer1,
+.rainLayer2 {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+    background-size: 2px 20px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.rainLayer1 {
+    animation: rainFall 0.7s linear infinite;
+}
+
+.rainLayer2 {
+    background-size: 1px 15px;
+    /* Smaller, slower */
+    opacity: 0.3;
+    animation: rainFall 1.2s linear infinite;
+}
+
+/* --- Snow Effects (Parallax) --- */
+.snowLayer1,
+.snowLayer2 {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, white 50%, transparent 50%);
+    background-size: 8px 8px;
+    /* Snowflake size space */
+    pointer-events: none;
+}
+
+.snowLayer1 {
+    opacity: 0.8;
+    background-position: 0 0, 25px 25px;
+    background-size: 300px 300px;
+    /* Pattern size */
+    animation: snowFall 5s linear infinite;
+}
+
+.snowLayer2 {
+    opacity: 0.5;
+    background-position: 15px 15px, 40px 40px;
+    background-size: 150px 150px;
+    animation: snowFall 10s linear infinite;
+    /* Slower, background */
+}
+
+/* --- Animations --- */
+@keyframes rotateSun {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseGlow {
+    from {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    to {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes drift {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes fogFlow {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 0.3;
+    }
+}
+
+@keyframes rainFall {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 100vh;
+    }
+}
+
+@keyframes snowFall {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 50px 100vh;
+    }
+}

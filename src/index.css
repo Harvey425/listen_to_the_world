@@ -17,6 +17,20 @@
   @apply bg-transparent;
 }
 
-::-webkit-scrollbar-thumb {
+::webkit-scrollbar-thumb {
   @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+@layer utilities {
+  .btn-cool {
+    @apply transition-all duration-200 active:scale-90 hover:bg-white/10;
+  }
+
+  .btn-cool:hover {
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+  }
+
+  .btn-cool:active {
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.6);
+  }
 }

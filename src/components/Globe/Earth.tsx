@@ -1,14 +1,17 @@
 import { useRef, useEffect, useMemo } from 'react';
 import { useLoader } from '@react-three/fiber';
-import { TextureLoader, Mesh, Color, Vector3 } from 'three';
+import { TextureLoader, Mesh, Color, Vector3, Vector2 } from 'three';
 import { useRadioStore } from '../../store/useRadioStore';
 import { StationMarkers } from './StationMarkers';
 import { CountryMesh } from './CountryMesh';
+import { AtmosphereGlow } from './AtmosphereGlow';
+import { SignalArcs } from './SignalArcs';
 
 // Assets
-import earthDay from '../../assets/textures/earth_day.jpg';
-import earthNormal from '../../assets/textures/earth_normal.jpg';
-import earthSpecular from '../../assets/textures/earth_specular.jpg';
+// Assets (High Definition Blue Marble from Three-Globe)
+const earthDay = "https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg";
+const earthNormal = "https://unpkg.com/three-globe/example/img/earth-topology.png";
+const earthSpecular = "https://unpkg.com/three-globe/example/img/earth-water.png";
 
 // Lat/Lon to Vector3 conversion (reused)
 function latLonToVector3(lat: number, lon: number, radius: number = 1): Vector3 {
@@ -47,37 +50,51 @@ export function Earth() {
             {/* Sun Light - REMOVED for uniform lighting */}
             {/* <directionalLight position={sunPosition} intensity={1.5} /> */}
 
-            {/* Uniform lighting */}
-            <ambientLight intensity={2.5} />
+            {/* Uniform lighting - Increased brightness per user request */}
+            <ambientLight intensity={6} />
 
-            {/* Dynamic Active Station Light */}
+            {/* Dynamic Active Station Beacon (Glow) */}
             {lightPos && (
-                <pointLight
-                    position={lightPos}
-                    intensity={2.0}
-                    distance={0.5}
-                    decay={2}
-                    color="#00f3ff"
-                />
+                <group position={lightPos}>
+                    {/* Core Light Source (Visual) */}
+                    <mesh>
+                        <sphereGeometry args={[0.005, 16, 16]} />
+                        <meshBasicMaterial color="#00f3ff" toneMapped={false} />
+                    </mesh>
+                    {/* Ambient Glow using PointLight with low distance to avoid global artifacting */}
+                    <pointLight
+                        intensity={1.5}
+                        distance={0.1}
+                        decay={2}
+                        color="#00f3ff"
+                    />
+                </group>
             )}
 
-            {/* Earth Sphere */}
+            {/* Earth Sphere - High Res Geometry to fix jagged edges */}
             <mesh ref={earthRef} rotation={[0, 0, 0]} raycast={() => null}>
-                <sphereGeometry args={[1, 64, 64]} />
+                <sphereGeometry args={[1, 128, 128]} />
                 <meshStandardMaterial
                     map={colorMap}
                     normalMap={normalMap}
                     roughnessMap={specularMap}
-                    roughness={0.5}
-                    metalness={0.1}
+                    roughness={0.7} /* Less glossy */
+                    metalness={0.05} /* Less metallic */
                     emissiveMap={colorMap}
-                    emissive={new Color('#00f3ff')}
-                    emissiveIntensity={0.02} /* Reduced slightly */
+                    emissive={new Color('#111111')} /* Subtle night lights */
+                    emissiveIntensity={0.5}
+                    normalScale={new Vector2(0.5, 0.5)} /* Reduce normal map intensity to reduce jagged shadows */
                 />
             </mesh>
 
             {/* Markers */}
             <StationMarkers />
+
+            {/* Atmosphere Glow */}
+            <AtmosphereGlow />
+
+            {/* Signal Arcs - REMOVED per user request */}
+            {/* <SignalArcs /> */}
 
             {/* Country Borders & Interaction */}
             <CountryMesh />

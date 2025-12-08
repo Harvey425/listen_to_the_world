@@ -1,0 +1,64 @@
+import { useRef, useState } from 'react';
+import { useFrame } from '@react-three/fiber';
+import { Stars, Float, Sparkles } from '@react-three/drei';
+import { Vector3, MathUtils } from 'three';
+
+function ShootingStar() {
+    const ref = useRef<any>();
+    const [page] = useState(() => ({
+        start: new Vector3(
+            (Math.random() - 0.5) * 10,
+            (Math.random() - 0.5) * 10,
+            (Math.random() - 0.5) * 10
+        ).normalize().multiplyScalar(10), // Start on a sphere of radius 10
+        velocity: new Vector3(
+            (Math.random() - 0.5),
+            (Math.random() - 0.5),
+            (Math.random() - 0.5)
+        ).normalize().multiplyScalar(0.2) // Speed
+    }));
+
+    useFrame(() => {
+        if(!ref.current) return;
+        ref.current.position.add(page.velocity);
+        // Reset if too far ?? Or just let it fly and unmount?
+        // Simpler: Just render a few lines that loop.
+    });
+
+    return (
+        <mesh ref={ref} position={page.start}>
+             {/* Trail visual implementation */}
+             <boxGeometry args={[0.05, 0.05, 2]} />
+             <meshBasicMaterial color="white" transparent opacity={0.5} />
+        </mesh>
+    )
+}
+
+// Actually, simpler approach for "Natural & Beautiful":
+// Use standard Stars, add a few "Nebula" sprites or specialized Planet meshes.
+
+export function CosmicBackground() {
+    return (
+        <group>
+            <Stars radius={300} depth={50} count={7000} factor={4} saturation={0} fade speed={0.5} />
+            <Sparkles count={100} scale={12} size={2} speed={0.4} opacity={0.5} color="cyan" />
+            
+            {/* Distant Planets (Blurred/Soft) */}
+            <Float speed={1} rotationIntensity={0.5} floatIntensity={0.5}>
+                 <mesh position={[-15, 5, -20]}> 
+                    <sphereGeometry args={[2, 32, 32]} />
+                    <meshBasicMaterial color="#ffccaa" transparent opacity={0.3} toneMapped={false} />
+                 </mesh>
+            </Float>
+            
+             <Float speed={0.8} rotationIntensity={0.5} floatIntensity={0.4}>
+                 <mesh position={[20, -10, -30]}> 
+                    <sphereGeometry args={[4, 32, 32]} />
+                    <meshBasicMaterial color="#ff8888" transparent opacity={0.2} toneMapped={false} />
+                 </mesh>
+            </Float>
+            
+            {/* TODO: Add proper shooting star system */}
+        </group>
+    );
+}

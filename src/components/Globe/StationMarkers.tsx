@@ -1,11 +1,9 @@
-import { useRef, useLayoutEffect, useMemo, useState } from 'react';
-import { useThree, useFrame } from '@react-three/fiber';
-import { Html } from '@react-three/drei';
-import { Object3D, Color, InstancedMesh, CanvasTexture, BufferGeometry, Float32BufferAttribute, Points, Vector3 } from 'three';
+import { useRef, useMemo, useState } from 'react';
+import { useThree } from '@react-three/fiber';
+import { Html, Line } from '@react-three/drei';
+import { CanvasTexture, BufferGeometry, Float32BufferAttribute, Color } from 'three';
 import { useRadioStore } from '../../store/useRadioStore';
 import { latLonToVector3 } from '../../utils/geoUtils';
-
-const TEMP_OBJECT = new Object3D();
 
 // Generate a round texture for the points
 function createCircleTexture() {
@@ -24,34 +22,38 @@ function createCircleTexture() {
 }
 
 export function StationMarkers() {
-    const { stations, playStation, activeStation, selectedCountry } = useRadioStore();
-    const pointsRef = useRef<Points>(null);
+    const { stations, playStation, activeStation, selectedCountry, filterTag, searchTerm } = useRadioStore();
     const { raycaster } = useThree();
     const map = useMemo(() => createCircleTexture(), []);
 
-    // Tighter threshold for "only show when very close"
-    raycaster.params.Points.threshold = 0.015;  // If selectedCountry is null, we show NO stations (or maybe all? User said "Only ... after click")
-    // User request: "Cancel square gray box... only when mouse clicks a country, then show that country's stations"
-    // So default: Hide all? Or show all invisible?
-    // "Initially... only show country name, click -> zoom -> show dots"
-    // So stations are hidden by default!
-
-    // We can just filter the list passed to the rendering logic.
-    // However, StationMarkers uses InstancedMesh or Points.
-    // Re-creating the buffer every time might be slow if we switch countries often.
-    // But for 5000 points it's okay.
+    // Tighter threshold
+    raycaster.params.Points.threshold = 0.015;
 
     const visibleStations = useMemo(() => {
-        if (!selectedCountry) return []; // Hide all if no country selected
-        // Filter by ISO Code (s.countrycode from Radio Browser should match ISO_A2 from GeoJSON)
-        return stations.filter(s => s.countrycode === selectedCountry);
-    }, [stations, selectedCountry]);
+        let result = stations;
+
+        // 1. Tag Filter
+        if (filterTag) {
+            result = result.filter(s => s.tags && s.tags.toLowerCase().includes(filterTag));
+        }
+
+        // 2. Search Filter (Global Globe Filtering)
+        if (searchTerm) {
+            const lowerTerm = searchTerm.toLowerCase();
+            result = result.filter(s =>
+                s.name.toLowerCase().includes(lowerTerm) ||
+                (s.tags && s.tags.toLowerCase().includes(lowerTerm)) ||
+                (s.country && s.country.toLowerCase().includes(lowerTerm))
+            );
+        }
+
+        return result;
+    }, [stations, selectedCountry, filterTag, searchTerm]);
 
     const geometry = useMemo(() => {
         const geo = new BufferGeometry();
         const positions = [];
         const colors = [];
-        const colorValid = new Color('#00f3ff');
 
         visibleStations.forEach(station => {
             const { geo_lat, geo_long } = station;
@@ -62,12 +64,11 @@ export function StationMarkers() {
             const isActive = activeStation?.stationuuid === station.stationuuid;
 
             if (isActive) {
-                // Active: Bright White
-                colors.push(1.0, 1.0, 1.0);
+                // Active: Golden / Orange (High contrast with Cyan)
+                colors.push(1.0, 0.6, 0.1);
             } else {
-                // Inactive: Warm Gold/Orange (to contrast with Blue/Cyan selection)
-                // RGB for polished orange: ~ 1.0, 0.6, 0.2
-                colors.push(1.0, 0.65, 0.2);
+                // Inactive: Bioluminescent Cyan (Cyber-Minimalism)
+                colors.push(0.0, 0.9, 1.0);
             }
         });
 
@@ -75,6 +76,42 @@ export function StationMarkers() {
         geo.setAttribute('color', new Float32BufferAttribute(colors, 3));
         return geo;
     }, [visibleStations, activeStation]);
+
+    // Active Station 3D Beacon (Height & Size)
+    // We render this separately to give it "3D Height" as requested
+    const activeBeacon = useMemo(() => {
+        if (!activeStation) return null;
+
+        const { geo_lat, geo_long } = activeStation;
+        const surfacePos = latLonToVector3(geo_lat, geo_long, 1.0);
+        const highPos = latLonToVector3(geo_lat, geo_long, 1.15); // Significant height
+
+        return (
+            <group>
+                {/* Visual Line connecting surface to beacon */}
+                <Line
+                    points={[surfacePos, highPos]}
+                    color="#ff9919"
+                    lineWidth={1.5}
+                    transparent
+                    opacity={0.6}
+                />
+
+                {/* The Beacon Sphere */}
+                <mesh position={highPos}>
+                    <sphereGeometry args={[0.02, 16, 16]} />
+                    <meshBasicMaterial color="#ff9919" toneMapped={false} />
+                </mesh>
+
+                {/* Outer Glow Halo */}
+                <mesh position={highPos}>
+                    <sphereGeometry args={[0.04, 16, 16]} />
+                    <meshBasicMaterial color="#ff9919" transparent opacity={0.2} toneMapped={false} depthWrite={false} />
+                </mesh>
+            </group>
+        );
+    }, [activeStation]);
+
 
     // Handler for clicks
     const handleClick = (e: any) => {
@@ -103,17 +140,12 @@ export function StationMarkers() {
     if (visibleStations.length === 0) return null;
 
     // Get hovered station position for tooltip
-    // We recalculate position here only for the SINGLE hovered item, which is cheap.
     let hoveredStationComp = null;
     if (hovered !== null && visibleStations[hovered]) {
         const s = visibleStations[hovered];
-        // Match marker radius exactly (1.005) to prevent parallax "flying" drift
         const pos = latLonToVector3(s.geo_lat, s.geo_long, 1.005);
         hoveredStationComp = (
             <Html position={pos} center zIndexRange={[100, 0]}>
-                {/* Translate Y to sit just above the point. 
-                    -translate-y-[120%] moves it up so the bottom of the tag is just above the center. 
-                */}
                 <div className="bg-black/60 backdrop-blur-sm border border-white/10 px-1.5 py-0.5 rounded-md whitespace-nowrap pointer-events-none transform -translate-y-[140%]">
                     <span className="text-[10px] font-light text-white/90 tracking-wider">
                         {s.name}
@@ -125,6 +157,7 @@ export function StationMarkers() {
 
     return (
         <group>
+            {/* The Cloud of Stations */}
             <points
                 geometry={geometry}
                 onClick={handleClick}
@@ -142,7 +175,12 @@ export function StationMarkers() {
                     toneMapped={false}
                 />
             </points>
+
+            {/* Tooltip */}
             {hoveredStationComp}
+
+            {/* Active Beacon 3D Element */}
+            {activeBeacon}
         </group>
     );
 }

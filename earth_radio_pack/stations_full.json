@@ -1,0 +1,1514 @@
+[
+  {
+    "id": "buzzin_radio_b0ef1392",
+    "name": "Buzzin Radio",
+    "location": {
+      "country": "Thailand",
+      "city": "Pattaya"
+    },
+    "streamUrl": "https://stream-177.zeno.fm/s9owlwmedskuv?zt=...",
+    "meta": {
+      "description_en": "A chilled out, laid back, easy listening online radio station broadcasting from Pattaya, Thailand, featuring a great selection of classic and new hits.",
+      "description_zh": "这是一个轻松、悠闲的在线电台，从泰国芭提雅播出，播放各种经典和新潮的歌曲。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/buzzin_radio_b0ef1392_logo.webp",
+      "sceneryPath": "./assets/scenery/buzzin_radio_b0ef1392_scenery.webp"
+    }
+  },
+  {
+    "id": "el_nuevo_zol_1067_d952450d",
+    "name": "EL NUEVO ZOL 106.7",
+    "location": {
+      "country": "USA",
+      "city": "Miami"
+    },
+    "streamUrl": "https://liveaudio.lamusica.com/MIA_WXDJ_icy",
+    "meta": {
+      "description_en": "El Nuevo Zol 106.7 is a leading Spanish Tropical radio station in Miami, USA, known for its vibrant mix of Bachata, Salsa, and Reggaeton music.",
+      "description_zh": "El Nuevo Zol 106.7 是美国迈阿密一家领先的西班牙热带音乐电台，以其充满活力的巴恰塔、萨尔萨和雷鬼动音乐组合而闻名。",
+      "tags": "variedad"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/el_nuevo_zol_1067_d952450d_logo.webp",
+      "sceneryPath": "./assets/scenery/el_nuevo_zol_1067_d952450d_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_west_indies_0623329a",
+    "name": "Générations West Indies",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://generationswestindies.ice.infomaniak.ch/generations-westindies.aac",
+    "meta": {
+      "description_en": "Générations West Indies is a French web radio from the Générations network, dedicated to the sounds of the Caribbean, including Zouk, Kompa, and Dancehall.",
+      "description_zh": "Générations West Indies 是法国 Générations 电台网络旗下的一个网络电台，专注于加勒比海地区的音乐，包括 Zouk、Kompa 和 Dancehall。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_west_indies_0623329a_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_west_indies_0623329a_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_soul_019258f4",
+    "name": "Générations Soul",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://gene-wr07.ice.infomaniak.ch/gene-wr07.aac",
+    "meta": {
+      "description_en": "Générations Soul is a Paris-based station from the Générations network, playing the best of Soul, Funk, and R&B music from the 70s to today.",
+      "description_zh": "Générations Soul 是 Générations 电台网络旗下的一个巴黎电台，播放从 70 年代至今最棒的灵魂乐、放克和 R&B 音乐。",
+      "tags": "soul"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_soul_019258f4_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_soul_019258f4_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_reggae_ac3a6188",
+    "name": "Générations Reggae",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://generations-caraibes.ice.infomaniak.ch/generations-caraibes-high.aac",
+    "meta": {
+      "description_en": "Générations Reggae is a French web radio dedicated to the roots and modern sounds of Reggae, Dancehall, and Dub music, broadcasting from Paris.",
+      "description_zh": "Générations Reggae 是一个法国网络电台，致力于播放雷鬼、舞厅和 Dub 音乐的根源和现代声音，从巴黎播出。",
+      "tags": "reggae"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_reggae_ac3a6188_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_reggae_ac3a6188_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_rap_us_gold_f04fcbb3",
+    "name": "Générations RAP U.S Gold",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://gene-wr08.ice.infomaniak.ch/gene-wr08.aac",
+    "meta": {
+      "description_en": "Générations RAP U.S Gold plays the best of classic American Hip-Hop and Rap, focusing on the golden era hits that defined the genre.",
+      "description_zh": "Générations RAP U.S Gold 播放最经典的美国嘻哈和说唱音乐，专注于定义该流派的黄金时代热门歌曲。",
+      "tags": "rap us"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_rap_us_gold_f04fcbb3_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_rap_us_gold_f04fcbb3_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_rap_us_d1054ebb",
+    "name": "Générations Rap U.S",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://generationfm-underground.ice.infomaniak.ch/generationfm-underground-high.aac",
+    "meta": {
+      "description_en": "Générations Rap U.S is dedicated to the latest and most influential American Hip-Hop and Rap tracks, keeping listeners up-to-date with the current scene.",
+      "description_zh": "Générations Rap U.S 致力于播放最新、最具影响力的美国嘻哈和说唱歌曲，让听众了解当前的说唱界动态。",
+      "tags": "rap us"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_rap_us_d1054ebb_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_rap_us_d1054ebb_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_g_funk_4485d144",
+    "name": "Générations G-Funk",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://generationsgfunk.ice.infomaniak.ch/generations-g-funk.aac",
+    "meta": {
+      "description_en": "Générations G-Funk is a niche station from the Générations network, focusing exclusively on the smooth, synth-heavy sounds of West Coast G-Funk Hip-Hop.",
+      "description_zh": "Générations G-Funk 是 Générations 网络旗下的一个特色电台，专门播放西海岸 G-Funk 嘻哈音乐中流畅、合成器主导的声音。",
+      "tags": "funk"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_g_funk_4485d144_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_g_funk_4485d144_scenery.webp"
+    }
+  },
+  {
+    "id": "twist_trap_c14d549f",
+    "name": "Twist Trap",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://stream-178.zeno.fm/9dhe4r7upg8uv?zt=...",
+    "meta": {
+      "description_en": "Twist Trap is an online radio station that blends the hard-hitting beats of Trap music with a unique, unexpected 'twist' of other genres, creating a dynamic listening experience.",
+      "description_zh": "Twist Trap 是一个将强劲的 Trap 音乐节拍与其他流派的独特“扭曲”融合在一起的在线电台，创造出动态的听觉体验。",
+      "tags": "rap;trap"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/twist_trap_c14d549f_logo.webp",
+      "sceneryPath": "./assets/scenery/twist_trap_c14d549f_scenery.webp"
+    }
+  },
+  {
+    "id": "rfi_monde_203b45f1",
+    "name": "RFI Monde",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://rfiafrique64k.ice.infomaniak.ch/rfimonde-64.mp3",
+    "meta": {
+      "description_en": "RFI Monde (Radio France Internationale) is the French public international news radio station, broadcasting worldwide in French and 16 other languages, focusing on global current affairs.",
+      "description_zh": "RFI Monde（法国国际广播电台）是法国的公共国际新闻电台，以法语和 16 种其他语言向全球广播，专注于全球时事新闻。",
+      "tags": "info;rfi"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/rfi_monde_203b45f1_logo.webp",
+      "sceneryPath": "./assets/scenery/rfi_monde_203b45f1_scenery.webp"
+    }
+  },
+  {
+    "id": "record_goa_psy_3555a6fe",
+    "name": "Record Goa Psy",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "https://radiorecord.hostingradio.ru/goa96.aacp",
+    "meta": {
+      "description_en": "Record Goa Psy is a sub-station of the Russian Radio Record network, dedicated to the psychedelic and uplifting sounds of Goa Trance music.",
+      "description_zh": "Record Goa Psy 是俄罗斯 Radio Record 网络的一个子电台，致力于播放迷幻和振奋人心的果阿出神音乐。",
+      "tags": "psytrance"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/record_goa_psy_3555a6fe_logo.webp",
+      "sceneryPath": "./assets/scenery/record_goa_psy_3555a6fe_scenery.webp"
+    }
+  },
+  {
+    "id": "reccord_trance_hits_08659ecf",
+    "name": "Reccord Trance Hits",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "https://radiorecord.hostingradio.ru/trancehits96.aacp",
+    "meta": {
+      "description_en": "Reccord Trance Hits, part of the Radio Record family, plays the biggest and most popular Trance music hits from around the world.",
+      "description_zh": "Reccord Trance Hits 是 Radio Record 家族的一部分，播放来自世界各地的最热门、最流行的出神音乐。",
+      "tags": "trance"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/reccord_trance_hits_08659ecf_logo.webp",
+      "sceneryPath": "./assets/scenery/reccord_trance_hits_08659ecf_scenery.webp"
+    }
+  },
+  {
+    "id": "reccord_techno_7578294a",
+    "name": "Reccord Techno",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "https://radiorecord.hostingradio.ru/techno96.aacp",
+    "meta": {
+      "description_en": "Reccord Techno delivers a non-stop stream of powerful and driving Techno music, curated by the Russian Radio Record network.",
+      "description_zh": "Reccord Techno 提供不间断的强劲和驱动型技术音乐流，由俄罗斯 Radio Record 网络策划。",
+      "tags": "techno"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/reccord_techno_7578294a_logo.webp",
+      "sceneryPath": "./assets/scenery/reccord_techno_7578294a_scenery.webp"
+    }
+  },
+  {
+    "id": "reccord_reggae_5323253e",
+    "name": "Reccord Reggae",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "https://radiorecord.hostingradio.ru/reggae96.aacp",
+    "meta": {
+      "description_en": "Reccord Reggae is a sub-station of Radio Record, bringing the best of Reggae and Ragga music to listeners with a focus on positive vibes and rhythms.",
+      "description_zh": "Reccord Reggae 是 Radio Record 的一个子电台，为听众带来最好的雷鬼和 Ragga 音乐，专注于积极的氛围和节奏。",
+      "tags": "ragga;reggae"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/reccord_reggae_5323253e_logo.webp",
+      "sceneryPath": "./assets/scenery/reccord_reggae_5323253e_scenery.webp"
+    }
+  },
+  {
+    "id": "reccord_latina_1749817d",
+    "name": "Reccord Latina",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "https://radiorecord.hostingradio.ru/latina96.aacp",
+    "meta": {
+      "description_en": "Reccord Latina is the Latin music channel of Radio Record, playing a vibrant mix of Latino, Salsa, and Reggaeton hits.",
+      "description_zh": "Reccord Latina 是 Radio Record 的拉丁音乐频道，播放充满活力的拉丁、萨尔萨和雷鬼动热门歌曲。",
+      "tags": "latino"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/reccord_latina_1749817d_logo.webp",
+      "sceneryPath": "./assets/scenery/reccord_latina_1749817d_scenery.webp"
+    }
+  },
+  {
+    "id": "reccord_groovetribal_2125585d",
+    "name": "Reccord Groove/Tribal",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "https://radiorecord.hostingradio.ru/groovetribal96.aacp",
+    "meta": {
+      "description_en": "Reccord Groove/Tribal is dedicated to the deep, rhythmic, and percussive sounds of Groove and Tribal House music, from the Radio Record network.",
+      "description_zh": "Reccord Groove/Tribal 致力于播放来自 Radio Record 网络的深沉、有节奏和打击乐的 Groove 和 Tribal House 音乐。",
+      "tags": "groove;tribal"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/reccord_groovetribal_2125585d_logo.webp",
+      "sceneryPath": "./assets/scenery/reccord_groovetribal_2125585d_scenery.webp"
+    }
+  },
+  {
+    "id": "reccord_garage_uk_2791471d",
+    "name": "Reccord Garage UK",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "https://radiorecord.hostingradio.ru/ukgarage96.aacp",
+    "meta": {
+      "description_en": "Reccord Garage UK is a specialized channel from Radio Record, focusing on the energetic and bass-heavy sounds of UK Garage music.",
+      "description_zh": "Reccord Garage UK 是 Radio Record 的一个专业频道，专注于播放充满活力和重低音的英国车库音乐。",
+      "tags": "uk garage"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/reccord_garage_uk_2791471d_logo.webp",
+      "sceneryPath": "./assets/scenery/reccord_garage_uk_2791471d_scenery.webp"
+    }
+  },
+  {
+    "id": "reccord_beach_4139851e",
+    "name": "Reccord beach",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "http://radiorecord.hostingradio.ru/beach96.aacp",
+    "meta": {
+      "description_en": "Reccord Beach is the chill-out and summer vibes channel of Radio Record, playing a relaxing mix of deep house, lounge, and downtempo electronic music.",
+      "description_zh": "Reccord Beach 是 Radio Record 的放松和夏日氛围频道，播放深度浩室、休闲音乐和慢速电子音乐的轻松组合。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/reccord_beach_4139851e_logo.webp",
+      "sceneryPath": "./assets/scenery/reccord_beach_4139851e_scenery.webp"
+    }
+  },
+  {
+    "id": "radio_record_reggae_4231219f",
+    "name": "Radio Record - Reggae",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "http://radiorecord.hostingradio.ru/reggae96.aacp",
+    "meta": {
+      "description_en": "Radio Record - Reggae is a dedicated channel from the Russian network, offering a continuous stream of classic and contemporary Reggae music.",
+      "description_zh": "Radio Record - Reggae 是俄罗斯网络的一个专用频道，提供经典和当代雷鬼音乐的连续流。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/radio_record_reggae_4231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/radio_record_reggae_4231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "radio_reccord_deep_6231219f",
+    "name": "Radio Reccord Deep",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "http://radiorecord.hostingradio.ru/deep96.aacp",
+    "meta": {
+      "description_en": "Radio Reccord Deep is the Deep House music channel of Radio Record, featuring smooth, soulful, and atmospheric electronic tracks.",
+      "description_zh": "Radio Reccord Deep 是 Radio Record 的深度浩室音乐频道，播放流畅、深情和氛围感的电子音乐。",
+      "tags": "deep"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/radio_reccord_deep_6231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/radio_reccord_deep_6231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "radio_reccord_chill_house_7231219f",
+    "name": "Radio Reccord Chill House",
+    "location": {
+      "country": "Russia",
+      "city": "Saint Petersburg"
+    },
+    "streamUrl": "https://radiorecord.hostingradio.ru/organic96.aacp",
+    "meta": {
+      "description_en": "Radio Reccord Chill House provides a relaxing blend of Chill House and Organic House music, perfect for unwinding and setting a calm mood.",
+      "description_zh": "Radio Reccord Chill House 提供放松的 Chill House 和有机浩室音乐组合，非常适合放松身心和营造平静的氛围。",
+      "tags": "house"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/radio_reccord_chill_house_7231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/radio_reccord_chill_house_7231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "radio_picados_online_música_247_8231219f",
+    "name": "Radio Picados - Online - Música 24/7",
+    "location": {
+      "country": "Chile",
+      "city": "Santiago"
+    },
+    "streamUrl": "https://a10.asurahosting.com:7630/radio.mp3",
+    "meta": {
+      "description_en": "Radio Picados is a Chilean online radio station broadcasting 24/7, featuring a diverse mix of music including 80s hits, pop, and Latin American chill vibes.",
+      "description_zh": "Radio Picados 是智利的一家 24/7 在线电台，播放各种音乐，包括 80 年代热门歌曲、流行音乐和拉丁美洲的休闲氛围。",
+      "tags": "80s;chile;chill;latam;pop;various"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/radio_picados_online_música_247_8231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/radio_picados_online_música_247_8231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "positively_meditation_9231219f",
+    "name": "Positively Meditation",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://streaming.positivity.radio/pr/posimeditation/icecast.audio",
+    "meta": {
+      "description_en": "Positively Meditation is a calming French web radio station dedicated to ambient, new age, and meditation music, designed to promote relaxation and well-being.",
+      "description_zh": "Positively Meditation 是一个平静的法国网络电台，致力于播放环境音乐、新世纪音乐和冥想音乐，旨在促进放松和健康。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/positively_meditation_9231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/positively_meditation_9231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "konpa_mix_radio_a231219f",
+    "name": "Konpa Mix Radio",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://das-edge12-live365-dal02.cdnstream.com/a15951",
+    "meta": {
+      "description_en": "Konpa Mix Radio is a French-based station specializing in Konpa and Zouk music, bringing the vibrant sounds of the French Caribbean to a global audience.",
+      "description_zh": "Konpa Mix Radio 是一个以法国为基地的电台，专注于 Konpa 和 Zouk 音乐，将法属加勒比海的活力声音带给全球听众。",
+      "tags": "kompa;zouk"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/konpa_mix_radio_a231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/konpa_mix_radio_a231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "klm_fm_b231219f",
+    "name": "KLM FM",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://us3new.listen2myradio.com:2199/listen.php?port=8117",
+    "meta": {
+      "description_en": "KLM FM is a French radio station focusing on Kompa and Konpa music, popular genres from the Caribbean islands, delivering rhythmic and danceable tracks.",
+      "description_zh": "KLM FM 是一个法国电台，专注于 Kompa 和 Konpa 音乐，这些是加勒比海岛屿的流行流派，提供有节奏和适合跳舞的曲目。",
+      "tags": "kompa;konpa"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/klm_fm_b231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/klm_fm_b231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "gwoka_radio_c231219f",
+    "name": "Gwoka Radio",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://ecmanager2.pro-fhi.net:1650/;",
+    "meta": {
+      "description_en": "Gwoka Radio is a French web radio dedicated to Gwoka, a traditional music and dance from Guadeloupe, celebrating the cultural heritage of the French Caribbean.",
+      "description_zh": "Gwoka Radio 是一个法国网络电台，致力于播放 Gwoka，这是一种来自瓜德罗普岛的传统音乐和舞蹈，弘扬法属加勒比海的文化遗产。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/gwoka_radio_c231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/gwoka_radio_c231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "guadeloupe_1ère_d231219f",
+    "name": "Guadeloupe 1ère",
+    "location": {
+      "country": "France",
+      "city": "Pointe-à-Pitre"
+    },
+    "streamUrl": "https://guadeloupe.ice.infomaniak.ch/guadeloupe-128.mp3",
+    "meta": {
+      "description_en": "Guadeloupe 1ère is a public radio station from the French overseas region of Guadeloupe, broadcasting news, culture, and Zouk music to the Caribbean and beyond.",
+      "description_zh": "Guadeloupe 1ère 是法属海外大区瓜德罗普岛的公共电台，向加勒比海及其他地区广播新闻、文化和 Zouk 音乐。",
+      "tags": "zouk"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/guadeloupe_1ère_d231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/guadeloupe_1ère_d231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_rnb_gold_e231219f",
+    "name": "Générations RNB Gold",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://generations-rnb-gold.ice.infomaniak.ch/generations-rnb-gold.aac",
+    "meta": {
+      "description_en": "Générations RNB Gold is a French web radio dedicated to the golden era of R&B music, playing classic hits from the 90s and early 2000s.",
+      "description_zh": "Générations RNB Gold 是一个法国网络电台，致力于播放 R&B 音乐的黄金时代，播放 90 年代和 2000 年代初的经典热门歌曲。",
+      "tags": "rnb"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_rnb_gold_e231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_rnb_gold_e231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_rb_f231219f",
+    "name": "Générations R&B",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://generationfm-slowjam.ice.infomaniak.ch/generationfm-slowjam-high.aac",
+    "meta": {
+      "description_en": "Générations R&B is a French station playing a mix of contemporary and classic R&B, focusing on slow jams and smooth grooves.",
+      "description_zh": "Générations R&B 是一个法国电台，播放当代和经典 R&B 的混合音乐，专注于慢歌和流畅的律动。",
+      "tags": "rnb"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_rb_f231219f_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_rb_f231219f_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_funk_0331219f",
+    "name": "Générations Funk",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://gene-wr05.ice.infomaniak.ch/gene-wr05.aac",
+    "meta": {
+      "description_en": "Générations Funk is a French web radio dedicated to the classic and modern sounds of Funk music, keeping the groove alive with timeless tracks.",
+      "description_zh": "Générations Funk 是一个法国网络电台，致力于播放经典和现代放克音乐，用永恒的曲目保持律动。",
+      "tags": "funk"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_funk_0331219f_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_funk_0331219f_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_dancehall_1331219f",
+    "name": "Générations Dancehall",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://generations-dancehall.ice.infomaniak.ch/generations-dancehall.aac",
+    "meta": {
+      "description_en": "Générations Dancehall is a French web radio focusing on the energetic and rhythmic sounds of Dancehall music from Jamaica and around the world.",
+      "description_zh": "Générations Dancehall 是一个法国网络电台，专注于来自牙买加和世界各地的充满活力和节奏感的舞厅音乐。",
+      "tags": "dancehall"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_dancehall_1331219f_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_dancehall_1331219f_scenery.webp"
+    }
+  },
+  {
+    "id": "générations_afrobeat_2331219f",
+    "name": "Générations Afrobeat",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://generations-wr001.ice.infomaniak.ch/generations-wr001.aac",
+    "meta": {
+      "description_en": "Générations Afrobeat is a French web radio dedicated to the vibrant and popular sounds of Afrobeat and Afropop music from the African continent.",
+      "description_zh": "Générations Afrobeat 是一个法国网络电台，致力于播放来自非洲大陆的充满活力和流行的非洲节拍和非洲流行音乐。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/générations_afrobeat_2331219f_logo.webp",
+      "sceneryPath": "./assets/scenery/générations_afrobeat_2331219f_scenery.webp"
+    }
+  },
+  {
+    "id": "allzic_radio_zouk_3331219f",
+    "name": "Allzic Radio Zouk",
+    "location": {
+      "country": "France",
+      "city": "Paris"
+    },
+    "streamUrl": "https://allzic28.ice.infomaniak.ch/allzic28.aac",
+    "meta": {
+      "description_en": "Allzic Radio Zouk is a French online radio station playing Zouk music, a rhythmic style originating from the French Caribbean islands of Guadeloupe and Martinique.",
+      "description_zh": "Allzic Radio Zouk 是一个法国在线电台，播放 Zouk 音乐，这是一种源自法属加勒比海瓜德罗普岛和马提尼克岛的有节奏的风格。",
+      "tags": "zouk"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/allzic_radio_zouk_3331219f_logo.webp",
+      "sceneryPath": "./assets/scenery/allzic_radio_zouk_3331219f_scenery.webp"
+    }
+  },
+  {
+    "id": "평양fm1052_4331219f",
+    "name": "평양FM105.2",
+    "location": {
+      "country": "North Korea",
+      "city": "Pyongyang"
+    },
+    "streamUrl": "http://listen7.myradio24.com/69366",
+    "meta": {
+      "description_en": "Pyongyang FM 105.2 is a state-run radio station in North Korea, broadcasting a mix of news, official announcements, and patriotic music to the capital city.",
+      "description_zh": "平壤FM105.2是朝鲜的一家国营电台，向首都平壤广播新闻、官方公告和爱国音乐。",
+      "tags": "105.2;105.2 fm;music"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/평양fm1052_4331219f_logo.webp",
+      "sceneryPath": "./assets/scenery/평양fm1052_4331219f_scenery.webp"
+    }
+  },
+  {
+    "id": "평양fm_5331219f",
+    "name": "평양FM",
+    "location": {
+      "country": "South Korea",
+      "city": "Seoul"
+    },
+    "streamUrl": "https://listen7.myradio24.com/69366",
+    "meta": {
+      "description_en": "Pyongyang FM, despite its name, is listed as a South Korean station, likely a re-broadcast or relay of the North Korean state radio, offering news and music.",
+      "description_zh": "平壤FM，尽管名字如此，但被列为韩国电台，可能是朝鲜国家电台的转播或中继，提供新闻和音乐。",
+      "tags": "105.2;105.2 fm;music;news"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/평양fm_5331219f_logo.webp",
+      "sceneryPath": "./assets/scenery/평양fm_5331219f_scenery.webp"
+    }
+  },
+  {
+    "id": "올드팝카페_6331219f",
+    "name": "올드팝카페",
+    "location": {
+      "country": "South Korea",
+      "city": "Seoul"
+    },
+    "streamUrl": "http://cast.oldpopcafe.net:7080/",
+    "meta": {
+      "description_en": "Old Pop Cafe is a popular South Korean online radio station dedicated to playing classic oldies and pop music, providing a nostalgic listening experience.",
+      "description_zh": "Old Pop Cafe 是韩国一家流行的在线电台，致力于播放经典老歌和流行音乐，提供怀旧的听觉体验。",
+      "tags": "oldies;pop music"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/올드팝카페_6331219f_logo.webp",
+      "sceneryPath": "./assets/scenery/올드팝카페_6331219f_scenery.webp"
+    }
+  },
+  {
+    "id": "안동mbc_fm4u_7331219f",
+    "name": "안동MBC FM4U",
+    "location": {
+      "country": "South Korea",
+      "city": "Andong"
+    },
+    "streamUrl": "https://live.andongmbc.co.kr/live/fmlive/playlist.m3u8",
+    "meta": {
+      "description_en": "Andong MBC FM4U is a local South Korean radio station from Andong, part of the MBC network, focusing on K-Pop, music, and general pop content.",
+      "description_zh": "安东MBC FM4U 是韩国安东市的一家地方电台，隶属于 MBC 网络，专注于 K-Pop、音乐和一般流行内容。",
+      "tags": "k-pop;music;pop"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/안동mbc_fm4u_7331219f_logo.webp",
+      "sceneryPath": "./assets/scenery/안동mbc_fm4u_7331219f_scenery.webp"
+    }
+  },
+  {
+    "id": "안동mbc_am_8331219f",
+    "name": "안동MBC AM",
+    "location": {
+      "country": "South Korea",
+      "city": "Andong"
+    },
+    "streamUrl": "http://andong.webcasting.co.kr:1935/live/amlive/playlist.m3u8",
+    "meta": {
+      "description_en": "Andong MBC AM is the AM counterpart of the local South Korean broadcaster in Andong, providing a mix of music and pop culture programming.",
+      "description_zh": "安东MBC AM 是韩国安东市地方广播公司的 AM 频道，提供音乐和流行文化节目的混合。",
+      "tags": "music;pop"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/안동mbc_am_8331219f_logo.webp",
+      "sceneryPath": "./assets/scenery/안동mbc_am_8331219f_scenery.webp"
+    }
+  },
+  {
+    "id": "아리랑모바일방송_9331219f",
+    "name": "아리랑모바일방송",
+    "location": {
+      "country": "China",
+      "city": "Yanji"
+    },
+    "streamUrl": "https://lhttp.qingting.fm/live/5022144/64k.mp3",
+    "meta": {
+      "description_en": "Arirang Mobile Broadcasting is a Chinese radio station based in Yanji, Jilin Province, which has a large Korean population, focusing on lifestyle and local content.",
+      "description_zh": "阿里郎移动广播是中国吉林省延吉市的一家电台，该地区有大量朝鲜族人口，专注于生活方式和本地内容。",
+      "tags": "lifestyle"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/아리랑모바일방송_9331219f_logo.webp",
+      "sceneryPath": "./assets/scenery/아리랑모바일방송_9331219f_scenery.webp"
+    }
+  },
+  {
+    "id": "비전트로트_a431219f",
+    "name": "비전트로트",
+    "location": {
+      "country": "South Korea",
+      "city": "Seoul"
+    },
+    "streamUrl": "http://pb1.inlive.co.kr:10070/",
+    "meta": {
+      "description_en": "Vision Trot is a South Korean online radio station dedicated to playing Trot music, a popular genre of Korean traditional pop music.",
+      "description_zh": "Vision Trot 是韩国一家在线电台，专门播放韩国传统流行音乐的流行流派——Trot 音乐。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/비전트로트_a431219f_logo.webp",
+      "sceneryPath": "./assets/scenery/비전트로트_a431219f_scenery.webp"
+    }
+  },
+  {
+    "id": "마포fm_b431219f",
+    "name": "마포FM",
+    "location": {
+      "country": "South Korea",
+      "city": "Seoul"
+    },
+    "streamUrl": "http://115.85.182.39/mapofm?type=.mp3",
+    "meta": {
+      "description_en": "Mapo FM is a community radio station in the Mapo-gu district of Seoul, South Korea, offering local news, talk shows, and a variety of music.",
+      "description_zh": "麻浦FM 是韩国首尔麻浦区的一家社区电台，提供本地新闻、脱口秀和各种音乐。",
+      "tags": "music;talk"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/마포fm_b431219f_logo.webp",
+      "sceneryPath": "./assets/scenery/마포fm_b431219f_scenery.webp"
+    }
+  },
+  {
+    "id": "라디오한국_radio_hankook_ksuh_1450_am_kwyz_1230_am_c431219f",
+    "name": "라디오한국 Radio Hankook KSUH 1450 AM KWYZ 1230 AM",
+    "location": {
+      "country": "USA",
+      "city": "Seattle"
+    },
+    "streamUrl": "http://50.222.186.230:8080/stream",
+    "meta": {
+      "description_en": "Radio Hankook is a Korean-language radio station serving the Korean community in the Seattle, USA area, broadcasting news, music, and cultural programs.",
+      "description_zh": "Radio Hankook 是一家服务于美国西雅图地区韩裔社区的韩语电台，广播新闻、音乐和文化节目。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/라디오한국_radio_hankook_ksuh_1450_am_kwyz_1230_am_c431219f_logo.webp",
+      "sceneryPath": "./assets/scenery/라디오한국_radio_hankook_ksuh_1450_am_kwyz_1230_am_c431219f_scenery.webp"
+    }
+  },
+  {
+    "id": "국방fm_d431219f",
+    "name": "국방FM",
+    "location": {
+      "country": "South Korea",
+      "city": "Seoul"
+    },
+    "streamUrl": "https://mediaworks.dema.mil.kr/live_edge/audio.sdp/playlist.m3u8",
+    "meta": {
+      "description_en": "Kookbang FM (Defense FM) is a South Korean radio station operated by the Ministry of National Defense, providing news, military information, and music to the armed forces and the public.",
+      "description_zh": "国防FM 是韩国国防部运营的电台，向武装部队和公众提供新闻、军事信息和音乐。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/국방fm_d431219f_logo.webp",
+      "sceneryPath": "./assets/scenery/국방fm_d431219f_scenery.webp"
+    }
+  },
+  {
+    "id": "경인방송_e431219f",
+    "name": "경인방송",
+    "location": {
+      "country": "South Korea",
+      "city": "Incheon"
+    },
+    "streamUrl": "https://stream.ifm.kr/live/aod1/playlist.m3u8",
+    "meta": {
+      "description_en": "iFM Gyeongin Broadcasting is a regional South Korean radio station serving the Gyeonggi and Incheon areas, offering a mix of news, music, and local programming.",
+      "description_zh": "iFM 京仁广播是韩国一家服务于京畿道和仁川地区的区域性电台，提供新闻、音乐和本地节目的混合。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/경인방송_e431219f_logo.webp",
+      "sceneryPath": "./assets/scenery/경인방송_e431219f_scenery.webp"
+    }
+  },
+  {
+    "id": "龙游人民广播电台fm954_f431219f",
+    "name": "龙游人民广播电台FM95.4",
+    "location": {
+      "country": "China",
+      "city": "Longyou"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/15318359/64k.mp3",
+    "meta": {
+      "description_en": "Longyou People's Radio FM 95.4 is a local Chinese radio station serving the Longyou County area, providing local news, public service announcements, and music.",
+      "description_zh": "龙游人民广播电台FM95.4 是中国龙游县的一家地方电台，提供本地新闻、公共服务公告和音乐。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/龙游人民广播电台fm954_f431219f_logo.webp",
+      "sceneryPath": "./assets/scenery/龙游人民广播电台fm954_f431219f_scenery.webp"
+    }
+  },
+  {
+    "id": "龙泉驿区龙泉人民广播电台_0531219f",
+    "name": "龙泉驿区龙泉人民广播电台",
+    "location": {
+      "country": "China",
+      "city": "Longquanyi"
+    },
+    "streamUrl": "https://lhttp.qingting.fm/live/20207769/64k.mp3?app_id=web",
+    "meta": {
+      "description_en": "Longquanyi People's Radio is a local Chinese radio station serving the Longquanyi District of Chengdu, providing local news and community-focused programming.",
+      "description_zh": "龙泉驿区龙泉人民广播电台是中国成都市龙泉驿区的一家地方电台，提供本地新闻和社区重点节目。",
+      "tags": "93.3;93.3 fm"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/龙泉驿区龙泉人民广播电台_0531219f_logo.webp",
+      "sceneryPath": "./assets/scenery/龙泉驿区龙泉人民广播电台_0531219f_scenery.webp"
+    }
+  },
+  {
+    "id": "龙岩综合广播_1531219f",
+    "name": "龙岩综合广播",
+    "location": {
+      "country": "China",
+      "city": "Longyan"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/20709/64k.mp3",
+    "meta": {
+      "description_en": "Longyan Comprehensive Radio is a local Chinese radio station serving the Longyan city area, providing a mix of news, public service, and general programming.",
+      "description_zh": "龙岩综合广播是中国龙岩市的一家地方电台，提供新闻、公共服务和一般节目的混合。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/龙岩综合广播_1531219f_logo.webp",
+      "sceneryPath": "./assets/scenery/龙岩综合广播_1531219f_scenery.webp"
+    }
+  },
+  {
+    "id": "龙山综合广播龙凤之声_2531219f",
+    "name": "龙山综合广播龙凤之声",
+    "location": {
+      "country": "China",
+      "city": "Longshan"
+    },
+    "streamUrl": "https://liveplay-srs.voc.com.cn/hls/broadcast/146_80a15b.m3u8",
+    "meta": {
+      "description_en": "Longshan Comprehensive Radio (Dragon and Phoenix Voice) is a local Chinese radio station in Longshan County, Hunan, focusing on local news and community services.",
+      "description_zh": "龙山综合广播（龙凤之声）是中国湖南省龙山县的一家地方电台，专注于本地新闻和社区服务。",
+      "tags": "5g智慧电台"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/龙山综合广播龙凤之声_2531219f_logo.webp",
+      "sceneryPath": "./assets/scenery/龙山综合广播龙凤之声_2531219f_scenery.webp"
+    }
+  },
+  {
+    "id": "龙井综合广播_3531219f",
+    "name": "龙井综合广播",
+    "location": {
+      "country": "China",
+      "city": "Longjing"
+    },
+    "streamUrl": "http://stream9.jlntv.cn/longjinggb/playlist.m3u8",
+    "meta": {
+      "description_en": "Longjing Comprehensive Radio is a local Chinese radio station in Longjing, Jilin Province, providing comprehensive news and information services to the local community.",
+      "description_zh": "龙井综合广播是中国吉林省龙井市的一家地方电台，为当地社区提供全面的新闻和信息服务。",
+      "tags": "news"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/龙井综合广播_3531219f_logo.webp",
+      "sceneryPath": "./assets/scenery/龙井综合广播_3531219f_scenery.webp"
+    }
+  },
+  {
+    "id": "齐齐哈尔综合广播_4531219f",
+    "name": "齐齐哈尔综合广播",
+    "location": {
+      "country": "China",
+      "city": "Qiqihar"
+    },
+    "streamUrl": "https://lhttp.qtfm.cn/live/20500133/64k.mp3",
+    "meta": {
+      "description_en": "Qiqihar Comprehensive Radio is a local Chinese radio station in Qiqihar, Heilongjiang Province, providing comprehensive news and information services.",
+      "description_zh": "齐齐哈尔综合广播是中国黑龙江省齐齐哈尔市的一家地方电台，提供全面的新闻和信息服务。",
+      "tags": "news"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/齐齐哈尔综合广播_4531219f_logo.webp",
+      "sceneryPath": "./assets/scenery/齐齐哈尔综合广播_4531219f_scenery.webp"
+    }
+  },
+  {
+    "id": "鼎城人民广播电台_5531219f",
+    "name": "鼎城人民广播电台",
+    "location": {
+      "country": "China",
+      "city": "Dingcheng"
+    },
+    "streamUrl": "https://lhttp.qingting.fm/live/5021860/64k.mp3",
+    "meta": {
+      "description_en": "Dingcheng People's Radio is a local Chinese radio station in Dingcheng District, Changde, providing a mix of music and local news.",
+      "description_zh": "鼎城人民广播电台是中国常德市鼎城区的当地电台，提供音乐和本地新闻的混合。",
+      "tags": "music;news"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/鼎城人民广播电台_5531219f_logo.webp",
+      "sceneryPath": "./assets/scenery/鼎城人民广播电台_5531219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黔西南综合广播_6531219f",
+    "name": "黔西南综合广播",
+    "location": {
+      "country": "China",
+      "city": "Qianxinan"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/5045/64k.mp3",
+    "meta": {
+      "description_en": "Qianxinan Comprehensive Radio is a local Chinese radio station serving the Qianxinan Buyei and Miao Autonomous Prefecture, providing comprehensive news and local content.",
+      "description_zh": "黔西南综合广播是中国黔西南布依族苗族自治州的一家地方电台，提供全面的新闻和本地内容。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黔西南综合广播_6531219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黔西南综合广播_6531219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黔西南旅游广播_7531219f",
+    "name": "黔西南旅游广播",
+    "location": {
+      "country": "China",
+      "city": "Qianxinan"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/5046/64k.mp3",
+    "meta": {
+      "description_en": "Qianxinan Tourism Radio is a local Chinese radio station in Qianxinan Prefecture, focusing on travel information, local culture, and traffic updates.",
+      "description_zh": "黔西南旅游广播是中国黔西南州的一家地方电台，专注于旅游信息、本地文化和交通更新。",
+      "tags": "traffic"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黔西南旅游广播_7531219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黔西南旅游广播_7531219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黔东南综合广播_8531219f",
+    "name": "黔东南综合广播",
+    "location": {
+      "country": "China",
+      "city": "Qiandongnan"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/5047/64k.mp3",
+    "meta": {
+      "description_en": "Qiandongnan Comprehensive Radio is a local Chinese radio station serving the Qiandongnan Miao and Dong Autonomous Prefecture, providing comprehensive news and local content.",
+      "description_zh": "黔东南综合广播是中国黔东南苗族侗族自治州的一家地方电台，提供全面的新闻和本地内容。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黔东南综合广播_8531219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黔东南综合广播_8531219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黔东南州凯里广播电台_9531219f",
+    "name": "黔东南州凯里广播电台",
+    "location": {
+      "country": "China",
+      "city": "Kaili"
+    },
+    "streamUrl": "https://lhttp.qtfm.cn/live/5022045/64k.mp3",
+    "meta": {
+      "description_en": "Kaili Radio Station in Qiandongnan Prefecture is a local Chinese radio station focusing on news and community services for the Kaili city area.",
+      "description_zh": "黔东南州凯里广播电台是中国黔东南州的一家地方电台，专注于凯里市的新闻和社区服务。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黔东南州凯里广播电台_9531219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黔东南州凯里广播电台_9531219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黔东南交通广播_a631219f",
+    "name": "黔东南交通广播",
+    "location": {
+      "country": "China",
+      "city": "Qiandongnan"
+    },
+    "streamUrl": "http://lhttp.qingting.fm/live/5022285/64k.mp3",
+    "meta": {
+      "description_en": "Qiandongnan Traffic Radio is a local Chinese radio station in Qiandongnan Prefecture, providing real-time traffic updates, road conditions, and music.",
+      "description_zh": "黔东南交通广播是中国黔东南州的一家地方电台，提供实时交通更新、路况和音乐。",
+      "tags": "traffic"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黔东南交通广播_a631219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黔东南交通广播_a631219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江高校广播_b631219f",
+    "name": "黑龙江高校广播",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/4976/64k.mp3",
+    "meta": {
+      "description_en": "Heilongjiang University Radio is a provincial Chinese radio station based in Harbin, focusing on content for university students and young people.",
+      "description_zh": "黑龙江高校广播是黑龙江省的一家省级电台，总部位于哈尔滨，专注于面向大学生和年轻人的内容。",
+      "tags": "youth"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江高校广播_b631219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江高校广播_b631219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江音乐广播_c631219f",
+    "name": "黑龙江音乐广播",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "https://lhttp.qtfm.cn/live/4969/64k.mp3",
+    "meta": {
+      "description_en": "Heilongjiang Music Radio is a provincial Chinese radio station based in Harbin, dedicated to playing a wide variety of music genres.",
+      "description_zh": "黑龙江音乐广播是黑龙江省的一家省级电台，总部位于哈尔滨，致力于播放各种音乐流派。",
+      "tags": "95.8;95.8 fm;music"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江音乐广播_c631219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江音乐广播_c631219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江都市女性广播_d631219f",
+    "name": "黑龙江都市女性广播",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "http://stream3.hljtv.com/hljrd97/sd/live.m3u8",
+    "meta": {
+      "description_en": "Heilongjiang Urban Women's Radio is a provincial Chinese radio station based in Harbin, focusing on lifestyle, fashion, and topics relevant to urban women.",
+      "description_zh": "黑龙江都市女性广播是黑龙江省的一家省级电台，总部位于哈尔滨，专注于生活方式、时尚和与都市女性相关的话题。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江都市女性广播_d631219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江都市女性广播_d631219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江都市女性广播_e631219f",
+    "name": "黑龙江都市·女性广播",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/4968/64k.mp3",
+    "meta": {
+      "description_en": "Heilongjiang Urban Women's Radio (alternate stream) is a provincial Chinese radio station based in Harbin, focusing on lifestyle and female-oriented content.",
+      "description_zh": "黑龙江都市·女性广播（备用流）是黑龙江省的一家省级电台，总部位于哈尔滨，专注于生活方式和女性导向的内容。",
+      "tags": "lifestyle"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江都市女性广播_e631219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江都市女性广播_e631219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江老年少儿广播_f631219f",
+    "name": "黑龙江老年·少儿广播",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/4972/64k.mp3",
+    "meta": {
+      "description_en": "Heilongjiang Elderly and Children's Radio is a provincial Chinese radio station based in Harbin, offering programming tailored for family, seniors, and children.",
+      "description_zh": "黑龙江老年·少儿广播是黑龙江省的一家省级电台，总部位于哈尔滨，提供针对家庭、老年人和儿童的节目。",
+      "tags": "family"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江老年少儿广播_f631219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江老年少儿广播_f631219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江生活广播_0731219f",
+    "name": "黑龙江生活广播",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "https://lhttp.qtfm.cn/live/4970/64k.mp3",
+    "meta": {
+      "description_en": "Heilongjiang Lifestyle Radio is a provincial Chinese radio station based in Harbin, focusing on daily life, consumer news, and lifestyle topics.",
+      "description_zh": "黑龙江生活广播是黑龙江省的一家省级电台，总部位于哈尔滨，专注于日常生活、消费新闻和生活方式话题。",
+      "tags": "lifestyle"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江生活广播_0731219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江生活广播_0731219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江生活广播_1731219f",
+    "name": "黑龙江生活广播",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "http://stream3.hljtv.com/hljrdsh/sd/live.m3u8",
+    "meta": {
+      "description_en": "Heilongjiang Lifestyle Radio (alternate stream) is a provincial Chinese radio station based in Harbin, focusing on daily life and lifestyle topics.",
+      "description_zh": "黑龙江生活广播（备用流）是黑龙江省的一家省级电台，总部位于哈尔滨，专注于日常生活和生活方式话题。",
+      "tags": "lifestyle"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江生活广播_1731219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江生活广播_1731219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江朝语广播_2731219f",
+    "name": "黑龙江朝语广播",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "https://satellitepull.cnr.cn/live/wx32hljcygb/playlist.m3u8?wsSession=...",
+    "meta": {
+      "description_en": "Heilongjiang Korean Language Radio is a provincial Chinese radio station based in Harbin, broadcasting news and cultural programs in the Korean language.",
+      "description_zh": "黑龙江朝语广播是黑龙江省的一家省级电台，总部位于哈尔滨，以朝鲜语广播新闻和文化节目。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江朝语广播_2731219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江朝语广播_2731219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江新闻广播_3731219f",
+    "name": "黑龙江新闻广播",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "https://lhttp.qtfm.cn/live/4974/64k.mp3",
+    "meta": {
+      "description_en": "Heilongjiang News Radio is a provincial Chinese radio station based in Harbin, providing comprehensive news coverage and current affairs programming.",
+      "description_zh": "黑龙江新闻广播是黑龙江省的一家省级电台，总部位于哈尔滨，提供全面的新闻报道和时事节目。",
+      "tags": "news"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江新闻广播_3731219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江新闻广播_3731219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江卫视伴音_4731219f",
+    "name": "黑龙江卫视伴音",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "https://piccpndali.v.myalicdn.com/audio/heilongjiang_2.m3u8",
+    "meta": {
+      "description_en": "Heilongjiang Satellite TV Audio is the audio feed for the provincial TV channel, based in Harbin, providing a simulcast of the television's sound.",
+      "description_zh": "黑龙江卫视伴音是省级电视频道的音频流，总部位于哈尔滨，提供电视声音的同步广播。",
+      "tags": "tv"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江卫视伴音_4731219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江卫视伴音_4731219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑龙江交通广播_5731219f",
+    "name": "黑龙江交通广播",
+    "location": {
+      "country": "China",
+      "city": "Harbin"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/4973/64k.mp3",
+    "meta": {
+      "description_en": "Heilongjiang Traffic Radio is a provincial Chinese radio station based in Harbin, providing real-time traffic information, road conditions, and music.",
+      "description_zh": "黑龙江交通广播是黑龙江省的一家省级电台，总部位于哈尔滨，提供实时交通信息、路况和音乐。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑龙江交通广播_5731219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑龙江交通广播_5731219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黑山县广播电视台广播节目_6731219f",
+    "name": "黑山县广播电视台广播节目",
+    "location": {
+      "country": "China",
+      "city": "Heishan"
+    },
+    "streamUrl": "https://lhttp.qtfm.cn/live/20500119/64k.mp3",
+    "meta": {
+      "description_en": "Heishan County Radio and Television Station is a local Chinese radio station in Heishan County, Liaoning, providing local news and community-focused programs.",
+      "description_zh": "黑山县广播电视台广播节目是中国辽宁省黑山县的一家地方电台，提供本地新闻和社区重点节目。",
+      "tags": "100.5;100.5 fm"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黑山县广播电视台广播节目_6731219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黑山县广播电视台广播节目_6731219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黄石经济广播_7731219f",
+    "name": "黄石经济广播",
+    "location": {
+      "country": "China",
+      "city": "Huangshi"
+    },
+    "streamUrl": "https://lhttp.qingting.fm/live/3964/64k.mp3",
+    "meta": {
+      "description_en": "Huangshi Economic Radio is a local Chinese radio station in Huangshi, Hubei, focusing on economic news, business, and traffic updates.",
+      "description_zh": "黄石经济广播是中国湖北省黄石市的一家地方电台，专注于经济新闻、商业和交通更新。",
+      "tags": "lounge;traffic"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黄石经济广播_7731219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黄石经济广播_7731219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黄岩电台_8731219f",
+    "name": "黄岩电台",
+    "location": {
+      "country": "China",
+      "city": "Huangyan"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/5022671/64k.mp3",
+    "meta": {
+      "description_en": "Huangyan Radio Station is a local Chinese radio station in Huangyan District, Taizhou, providing local news and community-focused programs.",
+      "description_zh": "黄岩电台是中国台州市黄岩区的一家地方电台，提供本地新闻和社区重点节目。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黄岩电台_8731219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黄岩电台_8731219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黄岛综合广播_9731219f",
+    "name": "黄岛综合广播",
+    "location": {
+      "country": "China",
+      "city": "Huangdao"
+    },
+    "streamUrl": "https://lhttp.qingting.fm/live/20176/64k.mp3",
+    "meta": {
+      "description_en": "Huangdao Comprehensive Radio is a local Chinese radio station in Huangdao District, Qingdao, providing a mix of music, news, and local programming.",
+      "description_zh": "黄岛综合广播是中国青岛市黄岛区的一家地方电台，提供音乐、新闻和本地节目的混合。",
+      "tags": "music"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黄岛综合广播_9731219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黄岛综合广播_9731219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黄山综合广播_a831219f",
+    "name": "黄山综合广播",
+    "location": {
+      "country": "China",
+      "city": "Huangshan"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/1968/64k.mp3",
+    "meta": {
+      "description_en": "Huangshan Comprehensive Radio is a local Chinese radio station in Huangshan city, Anhui, providing comprehensive news and local content.",
+      "description_zh": "黄山综合广播是中国安徽省黄山市的一家地方电台，提供全面的新闻和本地内容。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黄山综合广播_a831219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黄山综合广播_a831219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黄山旅游广播_b831219f",
+    "name": "黄山旅游广播",
+    "location": {
+      "country": "China",
+      "city": "Huangshan"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/1969/64k.mp3",
+    "meta": {
+      "description_en": "Huangshan Tourism Radio is a local Chinese radio station in Huangshan city, Anhui, focusing on travel information, local attractions, and tourism news.",
+      "description_zh": "黄山旅游广播是中国安徽省黄山市的一家地方电台，专注于旅游信息、本地景点和旅游新闻。",
+      "tags": "travel"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黄山旅游广播_b831219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黄山旅游广播_b831219f_scenery.webp"
+    }
+  },
+  {
+    "id": "黄冈交通音乐广播_c831219f",
+    "name": "黄冈交通音乐广播",
+    "location": {
+      "country": "China",
+      "city": "Huanggang"
+    },
+    "streamUrl": "https://lhttp.qingting.fm/live/20207776/64k.mp3",
+    "meta": {
+      "description_en": "Huanggang Traffic Music Radio is a local Chinese radio station in Huanggang, Hubei, providing a mix of traffic updates and popular music.",
+      "description_zh": "黄冈交通音乐广播是中国湖北省黄冈市的一家地方电台，提供交通更新和流行音乐的混合。",
+      "tags": "music"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/黄冈交通音乐广播_c831219f_logo.webp",
+      "sceneryPath": "./assets/scenery/黄冈交通音乐广播_c831219f_scenery.webp"
+    }
+  },
+  {
+    "id": "鹿角きりたんぽfm_d831219f",
+    "name": "鹿角きりたんぽFM",
+    "location": {
+      "country": "Japan",
+      "city": "Kazuno"
+    },
+    "streamUrl": "https://mtist.as.smartstream.ne.jp/30089/livestream/playlist.m3u8",
+    "meta": {
+      "description_en": "Kazuno Kiritanpo FM is a local Japanese community radio station in Kazuno, Akita Prefecture, providing local news, information, and community programs.",
+      "description_zh": "鹿角きりたんぽFM 是日本秋田县鹿角市的一家地方社区电台，提供本地新闻、信息和社区节目。",
+      "tags": "79.1;鹿角"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/鹿角きりたんぽfm_d831219f_logo.webp",
+      "sceneryPath": "./assets/scenery/鹿角きりたんぽfm_d831219f_scenery.webp"
+    }
+  },
+  {
+    "id": "鹿泉区fm873犀牛电台_e831219f",
+    "name": "鹿泉区FM87.3犀牛电台",
+    "location": {
+      "country": "China",
+      "city": "Luquan"
+    },
+    "streamUrl": "https://lhttp-hw.qtfm.cn/live/20211668/64k.mp3",
+    "meta": {
+      "description_en": "Luquan District FM 87.3 Rhino Radio is a local Chinese radio station in Luquan District, Shijiazhuang, playing a mix of indie, pop, and rock music.",
+      "description_zh": "鹿泉区FM87.3犀牛电台是中国石家庄市鹿泉区的一家地方电台，播放独立音乐、流行音乐和摇滚音乐的混合。",
+      "tags": "indie;mp3;music;pop;rock"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/鹿泉区fm873犀牛电台_e831219f_logo.webp",
+      "sceneryPath": "./assets/scenery/鹿泉区fm873犀牛电台_e831219f_scenery.webp"
+    }
+  },
+  {
+    "id": "鹿泉区fm873犀牛电台_f831219f",
+    "name": "鹿泉区FM87.3犀牛电台",
+    "location": {
+      "country": "China",
+      "city": "Luquan"
+    },
+    "streamUrl": "http://live.ximalaya.com/radio-first-page-app/live/2572/64.m3u8",
+    "meta": {
+      "description_en": "Luquan District FM 87.3 Rhino Radio (alternate stream) is a local Chinese radio station in Luquan District, Shijiazhuang, playing indie, music, and rock.",
+      "description_zh": "鹿泉区FM87.3犀牛电台（备用流）是中国石家庄市鹿泉区的一家地方电台，播放独立音乐、音乐和摇滚乐。",
+      "tags": "indie;music;rock"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/鹿泉区fm873犀牛电台_f831219f_logo.webp",
+      "sceneryPath": "./assets/scenery/鹿泉区fm873犀牛电台_f831219f_scenery.webp"
+    }
+  },
+  {
+    "id": "鹰潭综合广播_0931219f",
+    "name": "鹰潭综合广播",
+    "location": {
+      "country": "China",
+      "city": "Yingtan"
+    },
+    "streamUrl": "https://lhttp.qingting.fm/live/5022035/64k.mp3",
+    "meta": {
+      "description_en": "Yingtan Comprehensive Radio is a local Chinese radio station in Yingtan, Jiangxi, providing comprehensive news and local content.",
+      "description_zh": "鹰潭综合广播是中国江西省鹰潭市的一家地方电台，提供全面的新闻和本地内容。",
+      "tags": "news"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/鹰潭综合广播_0931219f_logo.webp",
+      "sceneryPath": "./assets/scenery/鹰潭综合广播_0931219f_scenery.webp"
+    }
+  },
+  {
+    "id": "鹰潭交通音乐广播_1931219f",
+    "name": "鹰潭交通音乐广播",
+    "location": {
+      "country": "China",
+      "city": "Yingtan"
+    },
+    "streamUrl": "https://lhttp.qingting.fm/live/5022036/64k.mp3",
+    "meta": {
+      "description_en": "Yingtan Traffic Music Radio is a local Chinese radio station in Yingtan, Jiangxi, providing a mix of traffic updates and popular music.",
+      "description_zh": "鹰潭交通音乐广播是中国江西省鹰潭市的一家地方电台，提供交通更新和流行音乐的混合。",
+      "tags": "music"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/鹰潭交通音乐广播_1931219f_logo.webp",
+      "sceneryPath": "./assets/scenery/鹰潭交通音乐广播_1931219f_scenery.webp"
+    }
+  },
+  {
+    "id": "鹤山人民广播电台_2931219f",
+    "name": "鹤山人民广播电台",
+    "location": {
+      "country": "China",
+      "city": "Heshan"
+    },
+    "streamUrl": "http://ls.qingting.fm/live/1286.m3u8",
+    "meta": {
+      "description_en": "Heshan People's Radio is a local Chinese radio station in Heshan, Guangdong, providing a mix of music, news, and local programming.",
+      "description_zh": "鹤山人民广播电台是中国广东省鹤山市的一家地方电台，提供音乐、新闻和本地节目的混合。",
+      "tags": "music;news"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/鹤山人民广播电台_2931219f_logo.webp",
+      "sceneryPath": "./assets/scenery/鹤山人民广播电台_2931219f_scenery.webp"
+    }
+  },
+  {
+    "id": "鹤壁综合广播_3931219f",
+    "name": "鹤壁综合广播",
+    "location": {
+      "country": "China",
+      "city": "Hebi"
+    },
+    "streamUrl": "https://lhttp.qtfm.cn/live/5022055/64k.mp3",
+    "meta": {
+      "description_en": "Hebi Comprehensive Radio is a local Chinese radio station in Hebi, Henan, providing comprehensive news and local content.",
+      "description_zh": "鹤壁综合广播是中国河南省鹤壁市的一家地方电台，提供全面的新闻和本地内容。",
+      "tags": ""
+    },
+    "assets": {
+      "logoPath": "./assets/logos/鹤壁综合广播_3931219f_logo.webp",
+      "sceneryPath": "./assets/scenery/鹤壁综合广播_3931219f_scenery.webp"
+    }
+  },
+  {
+    "id": "鳳鳴廣播電台2台_4931219f",
+    "name": "鳳鳴廣播電台2台",
+    "location": {
+      "country": "Taiwan",
+      "city": "Taichung"
+    },
+    "streamUrl": "https://am981.ddns.net:9005/stream.ogg",
+    "meta": {
+      "description_en": "Fengmin Broadcasting Station Channel 2 is a Taiwanese radio station based in Taichung, offering a mix of music and talk shows.",
+      "description_zh": "凤鸣广播电台2台是台湾台中市的一家电台，提供音乐和脱口秀节目的混合。",
+      "tags": "music;talk"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/鳳鳴廣播電台2台_4931219f_logo.webp",
+      "sceneryPath": "./assets/scenery/鳳鳴廣播電台2台_4931219f_scenery.webp"
+    }
+  },
+  {
+    "id": "鳳鳴廣播電台1台_5931219f",
+    "name": "鳳鳴廣播電台1台",
+    "location": {
+      "country": "Taiwan",
+      "city": "Taichung"
+    },
+    "streamUrl": "https://am1161.ddns.net:9005/stream.ogg",
+    "meta": {
+      "description_en": "Fengmin Broadcasting Station Channel 1 is a Taiwanese radio station based in Taichung, primarily focusing on talk shows and local news.",
+      "description_zh": "凤鸣广播电台1台是台湾台中市的一家电台，主要专注于脱口秀和本地新闻。",
+      "tags": "talk"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/鳳鳴廣播電台1台_5931219f_logo.webp",
+      "sceneryPath": "./assets/scenery/鳳鳴廣播電台1台_5931219f_scenery.webp"
+    }
+  },
+  {
+    "id": "魏县人民广播电台_6931219f",
+    "name": "魏县人民广播电台",
+    "location": {
+      "country": "China",
+      "city": "Weixian"
+    },
+    "streamUrl": "http://lhttp.qingting.fm/live/20212412/64k.mp3",
+    "meta": {
+      "description_en": "Weixian People's Radio is a local Chinese radio station in Weixian County, Hebei, providing local news, public service announcements, and music.",
+      "description_zh": "魏县人民广播电台是中国河北省魏县的一家地方电台，提供本地新闻、公共服务公告和音乐。",
+      "tags": "music"
+    },
+    "assets": {
+      "logoPath": "./assets/logos/魏县人民广播电台_6931219f_logo.webp",
+      "sceneryPath": "./assets/scenery/魏县人民广播电台_6931219f_scenery.webp"
+    }
+  }
+]
