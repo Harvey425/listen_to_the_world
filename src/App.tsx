@@ -49,7 +49,7 @@ function App() {
 
   // I18n for header
   const t = useMemo(() => ({
-    en: { live: "LIVE", title: "LISTEN TO THE WORLD" },
+    en: { live: "LIVE", title: "Ear.th" },
     zh: { live: "实时直播", title: "聆听世界" }
   }), []);
 

@@ -2,7 +2,7 @@
 
 > *In the vastness of the digital cosmos, we do not shout raw coordinates. We whisper signals.*
 
-This document describes the **Share Link Protocol** used in *Listen to the World* to transform mundane database UUIDs into elegant, cryptic transmission codes.
+This document describes the **Share Link Protocol** used in *Ear.th* to transform mundane database UUIDs into elegant, cryptic transmission codes.
 
 ## The Philosophy
 Raw UUIDs (e.g., `960662d9-0601-11e8-ae97-52543be04c81`) are utilitarian and ugly. They break the immersion of our cyber-minimalist aesthetic. We desire share links that look like intercepted alien transmissions—compact, alphanumeric, and slightly mysterious.

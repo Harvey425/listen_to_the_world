@@ -212,6 +212,6 @@ export const useRadioStore = create<RadioState>()(persist((set, get) => ({
         return null;
     }
 }), {
-    name: 'listen-to-the-world-storage',
+    name: 'ear-th-storage',
     partialize: (state) => ({ favorites: state.favorites, language: state.language }), // Only persist favorites and language
 }));
