@@ -1,10 +1,9 @@
-import { useEffect, useState, useMemo, useRef } from 'react';
-import { Line } from '@react-three/drei';
-import { latLonToVector3, findCountryByLatLon } from '../../utils/geoUtils';
+import { useEffect, useState, useRef } from 'react';
+import { findCountryByLatLon } from '../../utils/geoUtils';
 import { useRadioStore } from '../../store/useRadioStore';
 
 export function CountryMesh() {
-    const { setHoveredCountry, setSelectedCountry, selectedCountry, hoveredCountry } = useRadioStore();
+    const { setHoveredCountry, setSelectedCountry, selectedCountry } = useRadioStore();
     const [geoJson, setGeoJson] = useState<any>(null);
 
     // Load GeoJSON
@@ -22,33 +21,6 @@ export function CountryMesh() {
             .then(data => setGeoJson(data))
             .catch(err => console.error("Failed to load countries:", err));
     }, []);
-
-    // Create Lines
-    const lines = useMemo(() => {
-        if (!geoJson) return [];
-
-        const validLines: any[] = [];
-
-        geoJson.features.forEach((feature: any) => {
-            const { geometry } = feature;
-            if (!geometry) return;
-
-            const processPolygon = (coords: number[][]) => {
-                const points = coords.map(p => latLonToVector3(p[1], p[0], 1.002)); // Slightly above earth
-                const name = feature.properties.NAME || feature.properties.name || feature.properties.ADMIN;
-                const code = feature.properties.ISO_A2 || feature.properties.ISO_A2_EH;
-                validLines.push({ points, id: name, code }); // Store Code
-            };
-
-            if (geometry.type === 'Polygon') {
-                processPolygon(geometry.coordinates[0]);
-            } else if (geometry.type === 'MultiPolygon') {
-                geometry.coordinates.forEach((poly: any) => processPolygon(poly[0]));
-            }
-        });
-
-        return validLines;
-    }, [geoJson]);
 
     // Setup Interaction Listener on a simplified sphere ?
     // No, we can hook into Earth's events if we pass handle functions?

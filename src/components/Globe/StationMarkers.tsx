@@ -1,7 +1,7 @@
-import { useRef, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useThree } from '@react-three/fiber';
 import { Html, Line } from '@react-three/drei';
-import { CanvasTexture, BufferGeometry, Float32BufferAttribute, Color } from 'three';
+import { CanvasTexture, BufferGeometry, Float32BufferAttribute } from 'three';
 import { useRadioStore } from '../../store/useRadioStore';
 import { latLonToVector3 } from '../../utils/geoUtils';
 
@@ -52,8 +52,8 @@ export function StationMarkers() {
 
     const geometry = useMemo(() => {
         const geo = new BufferGeometry();
-        const positions = [];
-        const colors = [];
+        const positions: number[] = [];
+        const colors: number[] = [];
 
         visibleStations.forEach(station => {
             const { geo_lat, geo_long } = station;

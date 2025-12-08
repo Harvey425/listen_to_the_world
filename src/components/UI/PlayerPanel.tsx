@@ -29,7 +29,7 @@ export function PlayerPanel() {
     const { activeStation, isPlaying, togglePlay, playRandomStation, language, weather } = useRadioStore();
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [volume, setVolume] = useState(0.8);
-    const [error, setError] = useState(false);
+    const [_error, setError] = useState(false);
     const [localTimeStr, setLocalTimeStr] = useState<string>('');
     const fadeInterval = useRef<any>(null);
 
@@ -129,7 +129,7 @@ export function PlayerPanel() {
                     setUseCors(false);
                     audio.crossOrigin = null;
                     audio.src = activeStation.url_resolved || activeStation.url;
-                    audio.play().catch(e2 => setError(true));
+                    audio.play().catch(_e2 => setError(true));
                 } else {
                     setError(true);
                 }
