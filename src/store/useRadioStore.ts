@@ -11,6 +11,7 @@ interface RadioState {
 
     fetchStations: () => Promise<void>;
     playLocation: (lat: number, lng: number) => Promise<void>;
+    playStation: (station: Station) => Promise<void>;
     playRandomStation: () => void;
     stopStation: () => void;
     togglePlay: () => void;

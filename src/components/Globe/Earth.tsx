@@ -5,9 +5,7 @@ import { useRadioStore } from '../../store/useRadioStore';
 import { StationMarkers } from './StationMarkers';
 import { CountryMesh } from './CountryMesh';
 import { AtmosphereGlow } from './AtmosphereGlow';
-import { SignalArcs } from './SignalArcs';
 
-// Assets
 // Assets (High Definition Blue Marble from Three-Globe)
 const earthDay = "https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg";
 const earthNormal = "https://unpkg.com/three-globe/example/img/earth-topology.png";

@@ -12,7 +12,7 @@ export function SignalArcs() {
     const listenerLat = 31.23;
     const listenerLon = 121.47;
 
-    useFrame((state, delta) => {
+    useFrame((_, delta) => {
         if (lineRef.current && lineRef.current.material) {
             // Animate dash offset to simulate signal flow
             lineRef.current.material.dashOffset -= (delta * 0.5);
