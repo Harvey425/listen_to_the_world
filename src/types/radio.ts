@@ -14,4 +14,5 @@ export interface Station {
     clickcount: number;
     geo_lat: number;
     geo_long: number;
+    is_geo_estimated?: boolean;
 }

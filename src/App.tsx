@@ -14,7 +14,7 @@ import type { Station } from './types/radio';
 import { decodeStationId } from './utils/shareProtocol';
 
 function App() {
-  const { activeStation, selectedCountry, language, resolveStationById, togglePlay } = useRadioStore();
+  const { activeStation, selectedCountry, language, resolveStationById, playStation, stopStation } = useRadioStore();
   const [deepLinkStation, setDeepLinkStation] = useState<Station | null>(null);
   const [isDeepLinkLoading, setIsDeepLinkLoading] = useState(false);
 
@@ -35,6 +35,7 @@ function App() {
         resolveStationById(stationId).then((station) => {
           setIsDeepLinkLoading(false);
           if (station) {
+            stopStation(); // Ensure no background audio from persisted state
             setDeepLinkStation(station);
             // URL will be cleaned on user interaction (Play/Close)
           } else {
@@ -66,7 +67,9 @@ function App() {
           station={deepLinkStation}
           isSearching={isDeepLinkLoading}
           onPlay={() => {
-            togglePlay();
+            if (deepLinkStation) {
+              playStation(deepLinkStation);
+            }
             setDeepLinkStation(null);
             // Clean URL on play
             window.history.replaceState({}, '', window.location.pathname);

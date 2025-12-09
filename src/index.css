@@ -22,15 +22,72 @@
 }
 
 @layer utilities {
+
+  /* Apple-style Glass Material */
+  .glass-apple {
+    @apply bg-zinc-900/60 backdrop-blur-3xl backdrop-saturate-150 border border-white/10 shadow-2xl ring-1 ring-white/5;
+  }
+
+  /* Premium Interactive Element */
   .btn-cool {
-    @apply transition-all duration-200 active:scale-90 hover:bg-white/10;
+    @apply transition-all duration-300 active:scale-[0.96] hover:bg-white/10 border border-white/5 hover:border-white/20;
   }
 
   .btn-cool:hover {
-    box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
   }
 
   .btn-cool:active {
-    box-shadow: 0 0 20px rgba(0, 243, 255, 0.6);
+    box-shadow: none;
+    transform: scale(0.96);
+  }
+
+  /* Aurora Glow Effect (User Requested) */
+  .glass-premium {
+    @apply relative bg-zinc-900/60 backdrop-blur-3xl backdrop-saturate-150 rounded-[2rem];
+    /* No border on the element itself, handled by pseudo */
+  }
+
+  .glass-premium::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 2rem;
+    z-index: -1;
+    background: linear-gradient(120deg,
+        rgba(255, 0, 0, 0.2),
+        rgba(255, 165, 0, 0.2),
+        rgba(255, 255, 0, 0.2),
+        rgba(0, 255, 0, 0.2),
+        rgba(0, 225, 255, 0.2),
+        rgba(0, 0, 255, 0.2),
+        rgba(150, 0, 255, 0.2));
+    background-size: 300% 300%;
+    filter: blur(8px);
+    /* Diffuse glow */
+    animation: aurora-flow 6s ease-in-out infinite alternate;
+  }
+
+  /* Inner subtle highlight to define edges cleanly without dark stroke */
+  .glass-premium::after {
+    content: '';
+    @apply absolute inset-0 rounded-[2rem] pointer-events-none ring-1 ring-white/20;
+    mask-image: linear-gradient(to bottom, black, transparent);
+    /* Only highlight top edge */
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+  }
+}
+
+@keyframes aurora-flow {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.3;
+    transform: scale(0.99);
+  }
+
+  100% {
+    background-position: 100% 50%;
+    opacity: 0.6;
+    transform: scale(1.01);
   }
 }

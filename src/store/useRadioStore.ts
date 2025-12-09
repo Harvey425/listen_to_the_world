@@ -39,6 +39,11 @@ interface RadioState {
 
     // Deep Link Support
     resolveStationById: (id: string) => Promise<Station | null>;
+
+    // Direct Audio Control
+    audioElement: HTMLAudioElement | null;
+    setAudioElement: (el: HTMLAudioElement | null) => void;
+    startAudio: () => Promise<void>;
 }
 
 export const useRadioStore = create<RadioState>()(persist((set, get) => ({
@@ -145,7 +150,7 @@ export const useRadioStore = create<RadioState>()(persist((set, get) => ({
         const { stations } = get();
         if (stations.length > 0) {
             // Prioritize HTTPS stations (less likely to be blocked/broken)
-            const httpsStations = stations.filter(s => s.url_resolved.startsWith('https'));
+            const httpsStations = stations.filter(s => (s.url_resolved || s.url || '').startsWith('https'));
             const pool = httpsStations.length > 0 ? httpsStations : stations;
 
             const randomIndex = Math.floor(Math.random() * pool.length);
@@ -178,20 +183,56 @@ export const useRadioStore = create<RadioState>()(persist((set, get) => ({
         set((state) => ({ isPlaying: !state.isPlaying }));
     },
 
+    // Audio Control for Autoplay Interaction
+    audioElement: null,
+    setAudioElement: (el) => set({ audioElement: el }),
+    startAudio: async () => {
+        const { audioElement } = get();
+        if (audioElement) {
+            try {
+                await audioElement.play();
+            } catch (e) {
+                console.warn("Manual startAudio failed", e);
+            }
+        }
+    },
+
     resolveStationById: async (id: string) => {
         const { language } = get();
-
-        // Delegate to Service (Smart Cache -> API)
-        // This decouples store state from data availability
         set({ loading: true });
 
+        // 1. Check Local Pre-loaded Stations (Best Accuracy)
+        // This ensures consistent coordinates if the station is already in our optimized list
+        const localStation = get().stations.find(s => s.stationuuid === id);
+        if (localStation) {
+            set({
+                activeStation: localStation,
+                isPlaying: false, // Wait for overlay
+                selectedCountry: localStation.countrycode,
+                loading: false
+            });
+            return localStation;
+        }
+
+        // 2. Fetch from API (Fallback)
         try {
             const station = await radioService.resolveStation(id);
 
             if (station) {
+                // Apply Client-Side Geo Inference for fresh API data
+                // This fixes "0,0" coordinates for valid stations not in our JSON
+                const { refineStationCoordinates } = await import('../utils/geoUtils');
+                const { lat, long, isEstimated } = refineStationCoordinates(station);
+
+                station.geo_lat = lat;
+                station.geo_long = long;
+                station.is_geo_estimated = isEstimated;
+
+                console.log(`[DeepLink] Resolved ${station.name} to ${lat},${long} (Est: ${isEstimated})`);
+
                 set({
                     activeStation: station,
-                    isPlaying: false, // Wait for overlay
+                    isPlaying: false,
                     selectedCountry: station.countrycode,
                     loading: false
                 });

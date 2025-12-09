@@ -13,6 +13,27 @@ const STATION_CORRECTIONS: Record<string, { lat: number; long: number }> = {
     "Beijing Music Radio": { lat: 39.9042, long: 116.4074 },
 };
 
+/**
+ * Smart Protocol Upgrader
+ * Automatically upgrades known HTTP-only streams to HTTPS if supported by the provider.
+ */
+function upgradeUrl(url: string): string {
+    if (!url) return url;
+
+    // Qingting FM (ls.qingting.fm supports HTTPS)
+    if (url.startsWith('http://ls.qingting.fm')) {
+        return url.replace('http://ls.qingting.fm', 'https://ls.qingting.fm');
+    }
+
+    // Qingting FM (lhttp.qingting.fm -> lhttp.qtfm.cn HTTPS) - Experimental
+    // Some streams use lhttp.qingting.fm http only, but lhttp.qtfm.cn works for https
+    // if (url.includes('lhttp.qingting.fm')) {
+    //     return url.replace('http://lhttp.qingting.fm', 'https://lhttp.qtfm.cn');
+    // }
+
+    return url;
+}
+
 class RadioService {
     private api: RadioBrowserApi;
 
@@ -136,7 +157,12 @@ class RadioService {
             // Let's double check stations.json in next step if unsure, but assume generic handling:
             // If localMatch has 'stationuuid', it's likely our App Station format.
             if (localMatch && localMatch.stationuuid) {
-                return localMatch as Station;
+                // Ensure URLs are upgraded even for local cache
+                return {
+                    ...localMatch,
+                    url: upgradeUrl(localMatch.url),
+                    url_resolved: upgradeUrl(localMatch.url_resolved || localMatch.url)
+                } as Station;
             }
 
         } catch (e) {
@@ -177,15 +203,15 @@ class RadioService {
         return {
             stationuuid: s.id, // Lib uses 'id', we used 'stationuuid'
             name: s.name,
-            url: s.url,
-            url_resolved: s.urlResolved, // Critical: use resolved URL
+            url: upgradeUrl(s.url),
+            url_resolved: upgradeUrl(s.urlResolved), // Critical: use resolved URL
             homepage: s.homepage,
             favicon: s.favicon,
             tags: s.tags.join(','), // Lib tags is string[]
             country: s.country,
             countrycode: s.countryCode,
             state: s.state,
-            language: s.language.toString(), // array to string?
+            language: s.language ? s.language.toString() : '', // array to string?
             votes: s.votes,
             clickcount: s.clickCount,
             geo_lat: lat,

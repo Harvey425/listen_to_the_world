@@ -48,7 +48,18 @@ export function CountryMesh() {
         const lat = 90 - (phi * 180 / Math.PI);
         const lon = (theta * 180 / Math.PI) - 180;
 
-        const country = findCountryByLatLon(lat, lon, geoJson.features);
+        // Use bounding box lookup for code, then find feature
+        const countryCode = findCountryByLatLon(lat, lon);
+        const country = countryCode
+            ? geoJson.features.find((f: any) =>
+                f.properties.ISO_A2 === countryCode ||
+                f.properties.ISO_A2_EH === countryCode ||
+                // Fallback for some datasets using NAME/ADMIN match if standard?
+                // But our bounds map uses Codes.
+                (f.properties.ISO_A2 === 'CN' && countryCode === 'CN')
+            )
+            : null;
+
         if (country) {
             const name = country.properties.NAME || country.properties.name || country.properties.ADMIN;
             const code = country.properties.ISO_A2 || country.properties.ISO_A2_EH; // ISO Code
@@ -78,7 +89,11 @@ export function CountryMesh() {
         const theta = Math.atan2(point.z, -point.x);
         const lat = 90 - (phi * 180 / Math.PI);
         const lon = (theta * 180 / Math.PI) - 180;
-        const country = findCountryByLatLon(lat, lon, geoJson.features);
+
+        const countryCode = findCountryByLatLon(lat, lon);
+        const country = countryCode
+            ? geoJson.features.find((f: any) => f.properties.ISO_A2 === countryCode || f.properties.ISO_A2_EH === countryCode)
+            : null;
 
         const clickedCode = country ? (country.properties.ISO_A2 || country.properties.ISO_A2_EH) : null;
 
