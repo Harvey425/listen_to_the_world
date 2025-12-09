@@ -125,9 +125,9 @@ export function StationList() {
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: '-100%', opacity: 0 }}
                         transition={{ type: "spring", stiffness: 350, damping: 35 }}
-                        className="fixed top-20 md:top-24 left-2 md:left-6 bottom-28 md:bottom-32 w-[90vw] md:w-80 z-40 pointer-events-auto"
+                        className="fixed top-20 md:top-24 left-2 md:left-6 bottom-48 md:bottom-32 w-[90vw] md:w-80 z-40 pointer-events-auto"
                     >
-                        <div className="flex flex-col h-full glass-premium rounded-[2rem] overflow-hidden relative">
+                        <div className="flex flex-col h-full glass-premium rounded-2xl overflow-hidden relative">
                             {/* Header & Search */}
                             <div className="p-4 border-b border-white/5">
                                 <div className="flex justify-between items-center mb-4">

@@ -270,12 +270,41 @@ export function PlayerPanel() {
 
     if (!activeStation) return (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-full px-4 flex justify-center pointer-events-auto">
+            {/* Premium Idle Shuffle Button with Shimmer Effect */}
+            <style>{`
+                @keyframes shimmer {
+                    0% { background-position: -200% 0; }
+                    100% { background-position: 200% 0; }
+                }
+                @keyframes pulse-glow {
+                    0%, 100% { box-shadow: 0 0 20px rgba(0, 243, 255, 0.2), 0 0 40px rgba(0, 123, 255, 0.1); }
+                    50% { box-shadow: 0 0 30px rgba(0, 243, 255, 0.4), 0 0 60px rgba(0, 123, 255, 0.2); }
+                }
+                .btn-shimmer {
+                    background: linear-gradient(
+                        90deg, 
+                        transparent 0%, 
+                        rgba(255,255,255,0.08) 20%, 
+                        rgba(255,255,255,0.15) 50%, 
+                        rgba(255,255,255,0.08) 80%, 
+                        transparent 100%
+                    );
+                    background-size: 200% 100%;
+                    animation: shimmer 3s ease-in-out infinite;
+                }
+                .btn-pulse-ring {
+                    animation: pulse-glow 2s ease-in-out infinite;
+                }
+            `}</style>
             <button
                 onClick={playRandomStation}
-                className="bg-white/5 backdrop-blur-xl px-8 py-4 rounded-full text-white font-medium border border-white/20 hover:bg-white/15 transition-all flex items-center gap-3 text-base shadow-2xl shadow-black/30 active:scale-[0.98] hover:shadow-white/5 hover:border-white/30 tracking-tight"
+                className="relative overflow-hidden bg-white/5 backdrop-blur-xl px-8 py-4 rounded-full text-white font-medium border border-white/30 hover:bg-white/15 transition-all flex items-center gap-3 text-base shadow-2xl shadow-black/30 active:scale-[0.98] hover:shadow-primary/20 hover:border-primary/50 tracking-tight group btn-pulse-ring"
             >
-                <Shuffle size={20} className="opacity-80" />
-                {language === 'zh' ? '随机播放' : 'Start Listening'}
+                {/* Shimmer overlay */}
+                <span className="absolute inset-0 btn-shimmer rounded-full pointer-events-none" />
+
+                <Shuffle size={20} className="opacity-80 group-hover:opacity-100 group-hover:rotate-180 transition-all duration-500" />
+                <span className="relative z-10">{language === 'zh' ? '随机播放' : 'Start Listening'}</span>
             </button>
         </div>
     );
@@ -388,8 +417,9 @@ export function PlayerPanel() {
 
                 <div className="flex items-center justify-between mt-1 md:mt-2">
                     <div className="flex items-center gap-3 md:gap-4">
-                        <button onClick={playRandomStation} className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white transition-all active:scale-[0.96] border border-transparent hover:border-white/10">
-                            <Shuffle size={18} />
+                        <button onClick={playRandomStation} className="relative overflow-hidden w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white transition-all active:scale-[0.96] border border-white/20 hover:border-primary/50 btn-pulse-ring group">
+                            <span className="absolute inset-0 btn-shimmer rounded-full pointer-events-none" />
+                            <Shuffle size={18} className="relative z-10 group-hover:rotate-180 transition-all duration-500" />
                         </button>
                         <button onClick={togglePlay} className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/10 hover:border-white/20 transition-all active:scale-[0.96] shadow-lg shadow-black/20 hover:shadow-white/5">
                             {isPlaying ? <Pause size={24} fill="currentColor" /> : <Play size={24} className="ml-1" fill="currentColor" />}

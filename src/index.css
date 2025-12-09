@@ -44,7 +44,7 @@
 
   /* Aurora Glow Effect (User Requested) */
   .glass-premium {
-    @apply relative bg-zinc-900/60 backdrop-blur-3xl backdrop-saturate-150 rounded-[2rem];
+    @apply relative bg-zinc-900/60 backdrop-blur-3xl backdrop-saturate-150 rounded-2xl;
     /* No border on the element itself, handled by pseudo */
   }
 
@@ -52,29 +52,32 @@
     content: '';
     position: absolute;
     inset: -1px;
-    border-radius: 2rem;
+    border-radius: 1rem;
+    /* Match rounded-2xl */
     z-index: -1;
     background: linear-gradient(120deg,
-        rgba(255, 0, 0, 0.2),
-        rgba(255, 165, 0, 0.2),
-        rgba(255, 255, 0, 0.2),
-        rgba(0, 255, 0, 0.2),
-        rgba(0, 225, 255, 0.2),
-        rgba(0, 0, 255, 0.2),
-        rgba(150, 0, 255, 0.2));
+        rgba(255, 0, 0, 0.15),
+        rgba(255, 165, 0, 0.15),
+        rgba(255, 255, 0, 0.15),
+        rgba(0, 255, 0, 0.15),
+        rgba(0, 225, 255, 0.15),
+        rgba(0, 0, 255, 0.15),
+        rgba(150, 0, 255, 0.15));
     background-size: 300% 300%;
-    filter: blur(8px);
-    /* Diffuse glow */
+    filter: blur(6px);
+    opacity: inherit;
+    /* Animate with parent */
     animation: aurora-flow 6s ease-in-out infinite alternate;
   }
 
   /* Inner subtle highlight to define edges cleanly without dark stroke */
   .glass-premium::after {
     content: '';
-    @apply absolute inset-0 rounded-[2rem] pointer-events-none ring-1 ring-white/20;
+    @apply absolute inset-0 rounded-2xl pointer-events-none ring-1 ring-white/15;
     mask-image: linear-gradient(to bottom, black, transparent);
-    /* Only highlight top edge */
     -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+    opacity: inherit;
+    /* Animate with parent */
   }
 }
 
