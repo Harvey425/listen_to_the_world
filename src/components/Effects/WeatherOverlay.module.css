@@ -172,7 +172,7 @@
         radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.3), transparent 50%);
     filter: blur(40px);
     opacity: 0.7;
-    animation: drift 60s linear infinite;
+    animation: drift 120s linear infinite;
 }
 
 .thickClouds {
@@ -180,7 +180,7 @@
     background: radial-gradient(circle at 30% 30%, rgba(200, 200, 200, 0.8), transparent 70%),
         radial-gradient(circle at 70% 60%, rgba(150, 150, 150, 0.6), transparent 60%);
     filter: blur(50px);
-    animation: drift 100s linear infinite reverse;
+    animation: drift 180s linear infinite reverse;
 }
 
 .fogLayer {
@@ -189,7 +189,7 @@
     width: 200%;
     background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
     filter: blur(20px);
-    animation: fogFlow 20s linear infinite;
+    animation: fogFlow 60s linear infinite;
 }
 
 /* --- Rain Effects (Parallax) --- */

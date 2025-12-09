@@ -264,11 +264,11 @@ export class WeatherSystem {
 
             if (p.type === 'rain') {
                 ctx.beginPath();
-                ctx.lineWidth = 0.5 + p.z * 0.5; // Thinner: 0.5px to 1px (Was 1-2)
+                ctx.lineWidth = 0.3 + p.z * 0.3; // Thinner: 0.3px to 0.6px
                 ctx.strokeStyle = `rgba(200, 220, 255, ${p.alpha})`; // Bluish tint
 
                 // Motion Blur Length
-                const len = p.velocity.y * (0.6 + p.z * 0.4); // Shorter trails (Was 1+z)
+                const len = p.velocity.y * (0.4 + p.z * 0.2); // Shorter trails
                 ctx.moveTo(p.x, p.y);
                 ctx.lineTo(p.x + p.velocity.x * 2, p.y + len);
                 ctx.stroke();
