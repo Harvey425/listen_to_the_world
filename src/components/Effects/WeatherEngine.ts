@@ -145,6 +145,7 @@ export class WeatherSystem {
     height: number = 0;
     type: 'rain' | 'snow' | 'clear' | 'showers' | 'cloudy' = 'clear';
     intensity: number = 0; // 0 to 1
+    isThunderstorm: boolean = false; // Only trigger lightning during thunderstorm
 
     // Lightning
     lightningTimer: number = 0;
@@ -170,10 +171,11 @@ export class WeatherSystem {
         WeatherSystem.assetsLoaded = true;
     }
 
-    init(width: number, height: number, type: 'rain' | 'snow' | 'clear' | 'showers' | 'cloudy', rainIntensity: number = 1) {
+    init(width: number, height: number, type: 'rain' | 'snow' | 'clear' | 'showers' | 'cloudy', rainIntensity: number = 1, isThunderstorm: boolean = false) {
         this.width = width;
         this.height = height;
         this.type = type;
+        this.isThunderstorm = isThunderstorm;
         this.particles = [];
         this.splashes = [];
 
@@ -205,8 +207,8 @@ export class WeatherSystem {
             this.intensity = 1;
         }
 
-        // 2. Lightning Logic (Random Chance in heavy rain/showers)
-        if (this.type === 'rain' && Math.random() < 0.002) { // 0.2% per frame (~once every 8s at 60fps)
+        // 2. Lightning Logic (Only during thunderstorm)
+        if (this.isThunderstorm && Math.random() < 0.002) { // 0.2% per frame (~once every 8s at 60fps)
             this.triggerLightning();
         }
         // Decay Lightning

@@ -54,9 +54,18 @@ function App() {
     zh: { live: "实时直播", title: "聆听世界" }
   }), []);
 
-  const dateStr = useMemo(() => {
-    return new Date().toLocaleTimeString(language === 'zh' ? 'zh-CN' : 'en-US');
-  }, [language]);
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const dateStr = time.toLocaleTimeString(language === 'zh' ? 'zh-CN' : 'en-US', {
+    hour12: false
+  });
 
   return (
     <div className="w-full h-screen bg-black relative overflow-hidden">

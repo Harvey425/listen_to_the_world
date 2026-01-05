@@ -69,12 +69,15 @@ export function WeatherOverlay({ weatherCode, timeOfDay = 'day' }: WeatherOverla
         // Cloudy (New)
         if ([2, 3, 45, 48].includes(weatherCode)) type = 'cloudy';
 
+        // Thunderstorm: only codes 95, 96, 99 should trigger lightning
+        const isThunderstorm = weatherCode >= 95;
+
         // Init Engine
         const resize = () => {
             if (canvas.parentElement) {
                 canvas.width = canvas.parentElement.clientWidth;
                 canvas.height = canvas.parentElement.clientHeight;
-                systemRef.current.init(canvas.width, canvas.height, type, rainIntensity);
+                systemRef.current.init(canvas.width, canvas.height, type, rainIntensity, isThunderstorm);
             }
         };
 
